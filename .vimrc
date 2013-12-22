@@ -1,5 +1,9 @@
 set nocompatible
-" Setup vundle
+
+" -----------------------------------------------------------
+" Setup Vundle
+" -----------------------------------------------------------
+
 filetype off                  " required!
 
 set rtp+=~/.vim/bundle/vundle/
@@ -20,6 +24,7 @@ Bundle 'tpope/vim-fugitive'
 "Bundle 'L9'
 "Bundle 'FuzzyFinder'
 " non-GitHub repos
+Bundle 'git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex'
 "Bundle 'git://git.wincent.com/command-t.git'
 
 filetype plugin indent on     " required!
@@ -32,3 +37,16 @@ filetype plugin indent on     " required!
 "
 " see :h vundle for more details or wiki for FAQ
 " NOTE: comments after Bundle commands are not allowed.
+
+syntax on
+
+let mapleader = "ö"
+set t_Co=256
+
+" -----------------------------------------------------------
+" Plugin configuration
+" -----------------------------------------------------------
+" vim-latex
+let g:tex_flavor='latex'
+let g:Tex_DefaultTargetFormat='pdf'
+let g:Tex_CompileRule_pdf='pdflatex -shell-escape -interaction=nonstopmode $*'
