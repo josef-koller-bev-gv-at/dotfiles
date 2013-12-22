@@ -65,3 +65,5 @@ let g:syntastic_auto_loc_list = 1
 " Make the list a little shorter
 let g:syntastic_loc_list_height = 5
 
+" airline
+let g:airline_powerline_fonts=1
