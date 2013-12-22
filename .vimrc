@@ -17,6 +17,7 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
 Bundle 'kien/ctrlp.vim'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'bling/vim-airline'
 Bundle 'scrooloose/syntastic'
 "Bundle 'Lokaltog/vim-easymotion'
 "Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
@@ -43,6 +44,12 @@ syntax on
 
 let mapleader = "ö"
 set t_Co=256
+
+" always show status bar
+set laststatus=2
+
+" always show line numbers
+set number
 
 " -----------------------------------------------------------
 " Plugin configuration
