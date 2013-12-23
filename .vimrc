@@ -111,4 +111,6 @@ set noshowmode
 let g:UltiSnipsEditSplit = 'vertical'
 
 " Source this file when it's saved
-au BufWritePost .vimrc source ~/.vimrc
+if has("autocmd")
+  autocmd! bufwritepost .vimrc source $MYVIMRC
+endif
