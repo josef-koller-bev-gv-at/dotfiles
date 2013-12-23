@@ -93,6 +93,8 @@ let g:syntastic_loc_list_height = 5
 
 " airline
 let g:airline_powerline_fonts=1
+let g:airline#extensions#tabline#enabled = 1
+set noshowmode
 
 " Source this file when it's saved
 au BufWritePost .vimrc source ~/.vimrc
