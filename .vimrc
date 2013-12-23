@@ -19,16 +19,20 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'bling/vim-airline'
 Bundle 'scrooloose/syntastic'
-Bundle 'jonathanfilip/vim-lucius'
+" install guide: https://github.com/Valloric/YouCompleteMe
+Bundle 'Valloric/YouCompleteMe'
 Bundle 'SirVer/ultisnips'
+Bundle 'git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex'
+
+" Color themes
+Bundle 'jonathanfilip/vim-lucius'
+Bundle 'tomasr/molokai'
 "Bundle 'Lokaltog/vim-easymotion'
 "Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 "Bundle 'tpope/vim-rails.git'
 " vim-scripts repos
 "Bundle 'L9'
 "Bundle 'FuzzyFinder'
-" non-GitHub repos
-Bundle 'git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex'
 "Bundle 'git://git.wincent.com/command-t.git'
 
 filetype plugin indent on     " required!
