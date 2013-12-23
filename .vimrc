@@ -50,6 +50,9 @@ filetype plugin indent on     " required!
 
 syntax on
 
+colorscheme molokai
+let g:molokai_original = 1
+let g:rehash256 = 1
 let mapleader = "ö"
 set t_Co=256
 
@@ -80,6 +83,10 @@ nnoremap <C-t>     :tabnew<CR>
 
 nmap <leader>v :tabedit $MYVIMRC<CR>
 
+" clang-format
+map <Leader>k :%pyf ~/.janus/clang-format.py<CR>
+imap <C-K> <ESC>:pyf ~/.janus/clang-format.py<CR>i
+
 " create not existing directories
 " code from
 " http://stackoverflow.com/questions/4292733/vim-creating-parent-directories-on-save
@@ -105,6 +112,8 @@ let g:Tex_DefaultTargetFormat='pdf'
 let g:Tex_CompileRule_pdf='pdflatex -shell-escape -interaction=nonstopmode $*'
 
 " Syntastic
+let g:syntastic_cpp_compiler = 'g++'
+let g:syntastic_cpp_compiler_options = ' -std=c++11'
 " Automatically show error list
 let g:syntastic_auto_loc_list = 1
 " Make the list a little shorter
