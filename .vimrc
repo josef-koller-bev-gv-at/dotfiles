@@ -52,6 +52,15 @@ set laststatus=2
 " always show line numbers
 set number
 
+" Join two lines with <C-j>
+nnoremap <C-j> <S-j>
+
+" tab navigation
+nnoremap <C-tab>   :tabnext<CR>
+nnoremap <S-k>     :tabnext<CR>
+nnoremap <S-j>     :tabprevious<CR>
+nnoremap <C-t>     :tabnew<CR>
+
 " -----------------------------------------------------------
 " Plugin configuration
 " -----------------------------------------------------------
