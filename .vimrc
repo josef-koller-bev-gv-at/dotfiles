@@ -20,6 +20,7 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'bling/vim-airline'
 Bundle 'scrooloose/syntastic'
 Bundle 'jonathanfilip/vim-lucius'
+Bundle 'SirVer/ultisnips'
 "Bundle 'Lokaltog/vim-easymotion'
 "Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 "Bundle 'tpope/vim-rails.git'
@@ -95,6 +96,9 @@ let g:syntastic_loc_list_height = 5
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled = 1
 set noshowmode
+
+" UltiSnips
+let g:UltiSnipsEditSplit = 'vertical'
 
 " Source this file when it's saved
 au BufWritePost .vimrc source ~/.vimrc
