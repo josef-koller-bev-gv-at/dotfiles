@@ -47,6 +47,16 @@ syntax on
 let mapleader = "ö"
 set t_Co=256
 
+" Whitespace
+set nowrap                        " don't wrap lines
+set tabstop=2                     " a tab is two spaces
+set shiftwidth=2                  " an autoindent (with <<) is two spaces
+set expandtab                     " use spaces, not tabs
+set list                          " Show invisible characters
+set listchars=tab:>-,trail:·,extends:>,eol:¬
+set backspace=indent,eol,start    " backspace through everything in insert mode
+
+
 " always show status bar
 set laststatus=2
 
