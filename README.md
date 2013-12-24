@@ -18,3 +18,9 @@ Get all vim plugins by executing (in vim):
 To use powerline fonts, execute `install-powerline-fonts.sh` and
 select a powerline font in the terminal preferences (for example
 `Droid Sans Mono for Powerline`).
+
+For YouCompleteMe with C/C++ support run:
+```
+cd ~/.vim/bundle/YouCompleteMe
+./install.sh --clang-completer --system-libclang
+```
