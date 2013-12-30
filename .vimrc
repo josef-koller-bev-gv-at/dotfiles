@@ -23,6 +23,8 @@ Bundle 'scrooloose/syntastic'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'SirVer/ultisnips'
 Bundle 'git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex'
+Bundle 'tpope/vim-fireplace'
+Bundle 'tpope/vim-surround'
 
 " Color themes
 Bundle 'jonathanfilip/vim-lucius'
