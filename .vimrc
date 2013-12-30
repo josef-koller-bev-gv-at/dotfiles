@@ -116,6 +116,9 @@ set noshowmode
 " UltiSnips
 let g:UltiSnipsEditSplit = 'vertical'
 
+" fugitive
+nnoremap <leader>gs :Gstatus<CR>
+
 " Source this file when it's saved
 if has("autocmd")
   autocmd! bufwritepost .vimrc source $MYVIMRC
