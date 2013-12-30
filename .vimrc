@@ -78,6 +78,8 @@ nnoremap <S-k>     :tabnext<CR>
 nnoremap <S-j>     :tabprevious<CR>
 nnoremap <C-t>     :tabnew<CR>
 
+nmap <leader>v :tabedit $MYVIMRC<CR>
+
 " create not existing directories
 " code from
 " http://stackoverflow.com/questions/4292733/vim-creating-parent-directories-on-save
