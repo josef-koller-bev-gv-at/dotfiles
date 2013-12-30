@@ -146,6 +146,8 @@ au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:U
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsListSnippets="<c-e>"
 
+" YouCompleteMe
+nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " fugitive
 nnoremap <leader>gs :Gstatus<CR>
