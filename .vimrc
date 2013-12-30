@@ -29,6 +29,7 @@ Bundle 'tpope/vim-surround'
 " Color themes
 Bundle 'jonathanfilip/vim-lucius'
 Bundle 'tomasr/molokai'
+Bundle 'ratazzi/blackboard.vim'
 "Bundle 'Lokaltog/vim-easymotion'
 "Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 "Bundle 'tpope/vim-rails.git'
