@@ -51,9 +51,8 @@ filetype plugin indent on     " required!
 
 syntax on
 
-colorscheme molokai
-let g:molokai_original = 1
-let g:rehash256 = 1
+colorscheme lucius
+
 let mapleader = "ö"
 set t_Co=256
 
