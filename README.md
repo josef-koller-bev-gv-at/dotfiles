@@ -1,14 +1,6 @@
 #dotfiles
 ## Installation
-Link `.vimrc` to `~/.vimrc` with:
-```
-ln -s ~/dotfiles/.vimrc ~/.vimrc
-```
-
-Install [vundle](https://github.com/gmarik/vundle):
-```
-$ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-```
+Call the `install.sh` script.
 
 Get all vim plugins by executing (in vim):
 ```
@@ -21,6 +13,6 @@ select a powerline font in the terminal preferences (for example
 
 For YouCompleteMe with C/C++ support run:
 ```
-cd ~/.vim/bundle/YouCompleteMe
+cd ~/.vundle/YouCompleteMe
 ./install.sh --clang-completer --system-libclang
 ```

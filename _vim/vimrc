@@ -1,4 +1,5 @@
 set nocompatible
+set shell=/bin/zsh
 
 " -----------------------------------------------------------
 " Setup Vundle
@@ -6,8 +7,8 @@ set nocompatible
 
 filetype off                  " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc("~/.vundle")
 
 " let Vundle manage Vundle
 " required!
@@ -81,6 +82,7 @@ nnoremap <S-k>     :tabnext<CR>
 nnoremap <S-j>     :tabprevious<CR>
 nnoremap <C-t>     :tabnew<CR>
 
+" open vimrc in new tab
 nmap <leader>v :tabedit $MYVIMRC<CR>
 
 " clang-format
