@@ -16,7 +16,6 @@ Bundle 'gmarik/vundle'
 " Bundles
 Bundle 'tpope/vim-fugitive'
 Bundle 'kien/ctrlp.vim'
-Bundle 'altercation/vim-colors-solarized'
 Bundle 'bling/vim-airline'
 Bundle 'scrooloose/syntastic'
 " install guide: https://github.com/Valloric/YouCompleteMe
@@ -27,6 +26,7 @@ Bundle 'tpope/vim-fireplace'
 Bundle 'tpope/vim-surround'
 
 " Color themes
+Bundle 'altercation/vim-colors-solarized'
 Bundle 'jonathanfilip/vim-lucius'
 Bundle 'tomasr/molokai'
 Bundle 'ratazzi/blackboard.vim'
