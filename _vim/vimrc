@@ -1,5 +1,4 @@
 set nocompatible
-set shell=/bin/zsh
 
 " -----------------------------------------------------------
 " Setup Vundle
@@ -38,6 +37,11 @@ Bundle 'ratazzi/blackboard.vim'
 "Bundle 'L9'
 "Bundle 'FuzzyFinder'
 "Bundle 'git://git.wincent.com/command-t.git'
+"
+" Additional bundles and before configuration like <leader>
+if filereadable(expand("~/.vim/before.vimrc"))
+  source ~/.vim/before.vimrc
+endif
 
 filetype plugin indent on     " required!
 "
@@ -52,9 +56,6 @@ filetype plugin indent on     " required!
 
 syntax on
 
-colorscheme lucius
-
-let mapleader = "ö"
 set t_Co=256
 
 " Whitespace
@@ -153,6 +154,11 @@ nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " fugitive
 nnoremap <leader>gs :Gstatus<CR>
+
+" Customizations like colortheme or key bindings
+if filereadable(expand("~/.vim/after.vimrc"))
+  source ~/.vim/after.vimrc
+endif
 
 " Source this file when it's saved
 if has("autocmd")
