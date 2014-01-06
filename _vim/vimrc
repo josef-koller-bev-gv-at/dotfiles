@@ -86,6 +86,10 @@ nnoremap <C-t>     :tabnew<CR>
 " open vimrc in new tab
 nmap <leader>v :tabedit $MYVIMRC<CR>
 
+" Disable background color erase
+" This caused problems in tmux
+set t_ut=
+
 " clang-format
 map <Leader>k :%pyf ~/.janus/clang-format.py<CR>
 imap <C-K> <ESC>:pyf ~/.janus/clang-format.py<CR>i
