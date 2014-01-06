@@ -1,0 +1,9 @@
+snippet guard "Guard for header files" b
+#ifndef ${1:`!v substitute(toupper(expand('%:.')), "[./]", "_", "g")`_}
+
+#define $1
+
+$0
+
+#endif  // $1
+endsnippet
