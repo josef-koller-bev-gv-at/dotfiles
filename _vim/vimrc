@@ -24,6 +24,7 @@ Bundle 'SirVer/ultisnips'
 Bundle 'git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex'
 Bundle 'tpope/vim-fireplace'
 Bundle 'tpope/vim-surround'
+Bundle 'mileszs/ack.vim'
 
 " Color themes
 Bundle 'altercation/vim-colors-solarized'
@@ -85,6 +86,9 @@ nnoremap <C-t>     :tabnew<CR>
 
 " open vimrc in new tab
 nmap <leader>v :tabedit $MYVIMRC<CR>
+
+" Bind ack to <Leader>f
+nnoremap <Leader>f :Ack 
 
 " Disable background color erase
 " This caused problems in tmux
