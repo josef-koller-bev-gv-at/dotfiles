@@ -76,7 +76,7 @@ set laststatus=2
 set number
 
 " Join two lines with <C-j>
-nnoremap <C-j> <S-j>
+nnoremap <C-j> :join<CR>
 
 " tab navigation
 nnoremap <C-tab>   :tabnext<CR>

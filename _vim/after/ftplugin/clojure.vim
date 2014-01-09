@@ -14,3 +14,4 @@ augroup END
 nnoremap <leader>e :Eval<CR>
 nnoremap <leader>ae :%Eval<CR>
 
+nnoremap <C-j> :join<CR>
