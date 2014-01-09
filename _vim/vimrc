@@ -23,6 +23,7 @@ Bundle 'Valloric/YouCompleteMe'
 Bundle 'SirVer/ultisnips'
 Bundle 'git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex'
 Bundle 'tpope/vim-fireplace'
+Bundle 'vim-scripts/paredit.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'mileszs/ack.vim'
 
