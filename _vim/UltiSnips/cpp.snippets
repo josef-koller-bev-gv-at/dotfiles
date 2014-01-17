@@ -7,3 +7,14 @@ $0
 
 #endif  // $1
 endsnippet
+
+snippet ns "Namespace declaration" b!
+namespace $1
+{
+$0
+}  // namespace $1
+endsnippet
+
+snippet inc "#include local header (inc)" !
+#include "./${1:`!p snip.rv = snip.basename + '.h'`}"
+endsnippet
