@@ -60,6 +60,9 @@ syntax on
 
 set t_Co=256
 
+" Increase command history capacity
+set history=400
+
 " Whitespace
 set nowrap                        " don't wrap lines
 set tabstop=2                     " a tab is two spaces
@@ -73,11 +76,12 @@ set backspace=indent,eol,start    " backspace through everything in insert mode
 " always show status bar
 set laststatus=2
 
+" Always show some context
+set scrolloff=3
+set sidescrolloff=5
+
 " always show line numbers
 set number
-
-" Join two lines with <C-j>
-nnoremap <C-j> :join<CR>
 
 " tab navigation
 nnoremap <C-tab>   :tabnext<CR>
@@ -85,19 +89,72 @@ nnoremap <S-k>     :tabnext<CR>
 nnoremap <S-j>     :tabprevious<CR>
 nnoremap <C-t>     :tabnew<CR>
 
+" buffer navigation
+nnoremap <silent> <Leader>b :bprevious<CR>
+nnoremap <silent> <Leader>B :bnext<CR>
+
+" Enable 'scrolling with filtering' using <C-p> and <C-n>
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+
+" Join two lines with <C-j>
+nnoremap <A-J>     :join<CR>
+
+" repeate last substitution with same flags
+nnoremap & :&&<CR>
+xnoremap & :&&<CR>
+
+" map ` to <Leader>m because it doesn't work on german keyboards
+nnoremap <Leader>m `
+
+" map <C-]> to <Leader>g
+nnoremap <Leader>g <C-]>
+
 " open vimrc in new tab
 nmap <leader>v :tabedit $MYVIMRC<CR>
 
 " Bind ack to <Leader>f
 nnoremap <Leader>f :Ack 
 
+" map <C-]> to <Leader>g
+nnoremap <Leader>g <C-]>
+
+" Write file as super user
+cnoremap wsu w !sudo tee % > /dev/null
+
 " Disable background color erase
 " This caused problems in tmux
 set t_ut=
 
+" Don't interpret numbers with leading 0 as octal numbers (e.g <C-A> on 007
+" yields 008 and not 010
+set nrformats=
+
 " clang-format
 map <Leader>k :%pyf ~/.vim/clang-format.py<CR>
 imap <C-K> <ESC>:pyf ~/.vim/clang-format.py<CR>i
+
+" Remap %:h<Tab> to %% for edit, write, saveas and read commands
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+
+"Wrap enables wrapping and rebinds j and k
+command! -nargs=* Wrap call s:EnableWrap()
+function s:EnableWrap()
+  set wrap linebreak nolist
+  nnoremap k gk
+  nnoremap j gj
+endfunction
+
+" Qargs command which populates the args with all files in the quickfix
+" list
+command! -nargs=0 -bar Qargs execute 'args' QuickfixFilenames()
+function! QuickfixFilenames()
+  let buffer_numbers = {}
+  for quickfix_item in getqflist()
+    let buffer_numbers[quickfix_item['bufnr']] = bufname(quickfix_item['bufnr'])
+  endfor
+  return join(map(values(buffer_numbers), 'fnameescape(v:val)'))
+endfunction
 
 " create not existing directories
 " code from
@@ -160,6 +217,8 @@ let g:UltiSnipsListSnippets="<c-e>"
 
 " YouCompleteMe
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+" don't ask before using YCM
+let g:ycm_confirm_extra_conf = 0
 
 " fugitive
 nnoremap <leader>gs :Gstatus<CR>
