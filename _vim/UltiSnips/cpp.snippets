@@ -18,3 +18,24 @@ endsnippet
 snippet inc "#include local header (inc)" !
 #include "./${1:`!p snip.rv = snip.basename + '.h'`}"
 endsnippet
+
+snippet cl "class .. (class)" !
+class ${1:`!p 
+def lower_case_underscore_to_camel_case(string):
+    """Convert string or unicode from lower-case underscore to camel-case"""
+    class_ = string.__class__
+    splitted_string = string.split('_')
+    # use string's class to work on the string to keep its type
+    return class_.join('', map(class_.capitalize, splitted_string))
+snip.rv = lower_case_underscore_to_camel_case(snip.basename.encode('ascii', 'ignore')) or "name"
+`}
+{
+public:
+	${1/(\w+).*/$1/}(${2:arguments});
+	virtual ~${1/(\w+).*/$1/}();
+
+private:
+	${0:/* data */}
+};
+endsnippet
+
