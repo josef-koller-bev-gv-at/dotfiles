@@ -72,6 +72,11 @@ set list                          " Show invisible characters
 set listchars=tab:>-,trail:·,extends:>,eol:¬
 set backspace=indent,eol,start    " backspace through everything in insert mode
 
+" Search
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
 
 " always show status bar
 set laststatus=2
