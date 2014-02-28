@@ -119,7 +119,7 @@ nnoremap <Leader>g <C-]>
 nmap <leader>v :tabedit $MYVIMRC<CR>
 
 " Bind ack to <Leader>f
-nnoremap <Leader>f :Ack 
+nnoremap <Leader>f :Ack
 
 " map <C-]> to <Leader>g
 nnoremap <Leader>g <C-]>
@@ -141,6 +141,7 @@ imap <C-K> <ESC>:pyf ~/.vim/clang-format.py<CR>i
 
 " Remap %:h<Tab> to %% for edit, write, saveas and read commands
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+
 
 "Wrap enables wrapping and rebinds j and k
 command! -nargs=* Wrap call s:EnableWrap()
