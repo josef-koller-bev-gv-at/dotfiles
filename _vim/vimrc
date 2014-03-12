@@ -60,6 +60,7 @@ filetype plugin indent on     " required!
 syntax on
 
 set t_Co=256
+set hidden
 
 " Increase command history capacity
 set history=400
@@ -98,6 +99,7 @@ nnoremap <C-t>     :tabnew<CR>
 " buffer navigation
 nnoremap <silent> <Leader>b :bprevious<CR>
 nnoremap <silent> <Leader>B :bnext<CR>
+nnoremap <silent> <Leader>a :b#<CR> " alternate buffer
 
 " Enable 'scrolling with filtering' using <C-p> and <C-n>
 cnoremap <C-p> <Up>
