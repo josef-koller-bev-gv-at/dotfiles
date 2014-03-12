@@ -105,8 +105,8 @@ nnoremap <silent> <Leader>a :b#<CR> " alternate buffer
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 
-" Join two lines with <C-j>
-nnoremap <A-J>     :join<CR>
+" Join two lines
+nnoremap <Leader>j :join<CR>
 
 " repeate last substitution with same flags
 nnoremap & :&&<CR>
