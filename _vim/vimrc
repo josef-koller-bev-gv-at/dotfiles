@@ -27,6 +27,7 @@ Bundle 'tpope/vim-fireplace'
 Bundle 'vim-scripts/paredit.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'mileszs/ack.vim'
+Bundle 'sjl/gundo.vim'
 
 " Color themes
 Bundle 'altercation/vim-colors-solarized'
@@ -233,6 +234,9 @@ let g:ycm_confirm_extra_conf = 0
 
 " fugitive
 nnoremap <leader>gs :Gstatus<CR>
+
+" gundo
+nnoremap <leader>z :GundoToggle<CR>
 
 " Customizations like colortheme or key bindings
 if filereadable(expand("~/.vim/after.vimrc"))
