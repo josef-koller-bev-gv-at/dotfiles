@@ -186,6 +186,10 @@ autocmd BufWritePre * :call s:MkNonExDir(expand('<afile>'), +expand('<abuf>'))
 " format xml
 au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
 
+" c++
+au FileType cpp nnoremap <leader>c :vsp %<.cpp<CR><C-w><C-r>
+au FileType cpp nnoremap <leader>h :vsp %<.h<CR>
+
 " -----------------------------------------------------------
 " Plugin configuration
 " -----------------------------------------------------------
