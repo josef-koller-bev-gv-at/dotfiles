@@ -27,7 +27,10 @@ Bundle 'tpope/vim-fireplace'
 Bundle 'vim-scripts/paredit.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'mileszs/ack.vim'
+Bundle 'mattn/emmet-vim'
 Bundle 'sjl/gundo.vim'
+Bundle 'pangloss/vim-javascript'
+Bundle 'Shutnik/jshint2.vim'
 
 " Color themes
 Bundle 'altercation/vim-colors-solarized'
@@ -249,5 +252,5 @@ endif
 
 " Source this file when it's saved
 if has("autocmd")
-  autocmd! bufwritepost .vimrc source $MYVIMRC
+  autocmd! bufwritepost vimrc source $MYVIMRC
 endif
