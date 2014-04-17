@@ -143,10 +143,6 @@ set t_ut=
 " yields 008 and not 010
 set nrformats=
 
-" clang-format
-map <Leader>k :%pyf ~/.vim/clang-format.py<CR>
-imap <C-K> <ESC>:pyf ~/.vim/clang-format.py<CR>i
-
 " Remap %:h<Tab> to %% for edit, write, saveas and read commands
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
@@ -186,12 +182,18 @@ augroup BWCCreateDir
 augroup END
 autocmd BufWritePre * :call s:MkNonExDir(expand('<afile>'), +expand('<abuf>'))
 
+map <leader>k ggVG=<CR>
+
 " format xml
 au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
 
 " c++
 au FileType cpp nnoremap <leader>c :vsp %<.cpp<CR><C-w><C-r>
 au FileType cpp nnoremap <leader>h :vsp %<.h<CR>
+
+" clang-format
+au FileType cpp map <Leader>k :%pyf ~/.vim/clang-format.py<CR>
+au FileType cpp imap <C-K> <ESC>:pyf ~/.vim/clang-format.py<CR>i
 
 " -----------------------------------------------------------
 " Plugin configuration
