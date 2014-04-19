@@ -209,6 +209,9 @@ let g:syntastic_cpp_compiler_options = ' -std=c++11'
 " Make the list a little shorter
 let g:syntastic_loc_list_height = 5
 
+" Ctrlp
+let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files . -co --exclude-standard']
+
 " airline
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled = 1
