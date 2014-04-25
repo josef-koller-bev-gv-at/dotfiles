@@ -31,6 +31,7 @@ Bundle 'mattn/emmet-vim'
 Bundle 'sjl/gundo.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'Shutnik/jshint2.vim'
+Bundle 'Raimondi/delimitMate'
 
 " Color themes
 Bundle 'altercation/vim-colors-solarized'
