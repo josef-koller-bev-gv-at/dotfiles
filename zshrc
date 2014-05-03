@@ -7,11 +7,6 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="robbyrussell"
 
-# aliases
-alias g="git status"
-alias gh="git hist"
-alias gpu="gp -u origin `git symbolic-ref --short -q HEAD`"
-
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
@@ -44,6 +39,13 @@ alias gpu="gp -u origin `git symbolic-ref --short -q HEAD`"
 plugins=(git ruby bundler z)
 
 source $ZSH/oh-my-zsh.sh
+#
+# aliases
+alias g="git status"
+alias gh="git hist"
+alias gpu="gp -u origin `git symbolic-ref --short -q HEAD`"
+
+# RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
