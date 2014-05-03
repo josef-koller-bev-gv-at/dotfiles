@@ -6,7 +6,7 @@ if [ ! -f "$2" ]; then
 fi
 }
 
-$(create-alias _vim ~/.vim)
+$(create-alias vim ~/.vim)
 git submodule init
 git submodule update
 
