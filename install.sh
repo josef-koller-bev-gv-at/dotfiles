@@ -10,6 +10,7 @@ $(create-alias _vim ~/.vim)
 git submodule init
 git submodule update
 
+$(create-alias zshrc ~/.zshrc)
 $(create-alias _tmux.conf ~/.tmux.conf)
 $(create-alias gitconfig ~/.gitconfig)
 $(create-alias gitignore ~/.gitignore)
