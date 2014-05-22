@@ -43,7 +43,7 @@ source $ZSH/oh-my-zsh.sh
 # aliases
 alias g="git status"
 alias gh="git hist"
-alias gpu="gp -u origin `git symbolic-ref --short -q HEAD`"
+alias gpu="gp -u origin $(current_branch)
 
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
