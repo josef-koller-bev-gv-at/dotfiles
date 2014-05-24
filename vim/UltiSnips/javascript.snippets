@@ -1,0 +1,360 @@
+###########################################################################
+#                            TextMate Snippets                            #
+###########################################################################
+snippet get "Get Elements"
+getElement${1/(T)|.*/(?1:s)/}By${1:T}${1/(T)|(I)|.*/(?1:agName)(?2:d)/}('$2')
+endsnippet
+
+snippet '':f "object method string"
+'${1:${2:#thing}:${3:click}}': function(element){
+	$0
+}${10:,}
+endsnippet
+
+snippet f: "Object Method"
+${1:method_name}: function(${3:attribute}){
+	$0
+}${10:,}
+endsnippet
+
+snippet :, "Object Value JS"
+${1:value_name}: ${0:value},
+endsnippet
+
+snippet : "Object key key: 'value'"
+${1:key}: ${2:"${3:value}"}${4:, }
+endsnippet
+
+snippet proto "Prototype (proto)"
+${1:class_name}.prototype.${2:method_name} = function(${3:first_argument}) ,,{
+	${0}
+}
+ 
+endsnippet
+
+snippet for "for (...) {...} (faster)"
+for (var ${2:i} = ${1:Things}.length - 1; $2 >= 0; $2--){
+	${3:$1[$2]}$0
+}
+endsnippet
+
+snippet for "for (...) {...}"
+for (var ${2:i}=0; $2 < ${1:Things}.length; $2++) {
+	${3:$1[$2]}$0
+}
+endsnippet
+
+snippet fun "function (fun)"
+function ${1:function_name}(${2:argument}) {
+	${0}
+}
+endsnippet
+
+# for one line if .. else you usually use a ? b : c
+snippet ife "if ___ else"
+if (${1}) {
+	${2}
+} else {
+	${3}
+}
+endsnippet
+
+snippet if "if"
+if (${1}) {
+	${2}
+}
+endsnippet
+
+snippet timeout "setTimeout function"
+setTimeout(function() {$0}${2:}, ${1:10})
+endsnippet
+
+
+###########################################################################
+#                             Customizations                              #
+###########################################################################
+
+snippet f "function" w
+function(${1:args}) {
+	$0
+}${2:;}
+endsnippet
+
+snippet log "console.log call"
+console.log($0);
+endsnippet
+
+snippet al "alert"
+alert($0);
+endsnippet
+
+snippet ife "if - else" !b
+if (${1:condition}) {
+  ${2:truePath}
+} else {
+  ${3:falsePath}
+}
+endsnippet
+
+snippet tc "try - catch" !b
+try {
+  ${1:statements}
+} catch(err) {
+  ${0:catch}
+}
+endsnippet
+
+snippet vf "var ... = function" !b
+var ${1:function_name} = function(${2:args}) {
+  $0
+};
+endsnippet
+
+snippet tf "this.function"
+this.${1:function_name} = function(${2:args}) {
+	$0
+};
+endsnippet
+
+snippet tv "this.variable"
+this.${1:variable_name} = ${2:value};
+endsnippet
+
+snippet r "return"
+return $0;
+endsnippet
+
+snippet us "use strict" b
+"use strict";
+
+$0
+endsnippet
+
+snippet jsons "JSON.stringify" w
+JSON.stringify(${1:obj}${2:, null, ${3:2}})
+endsnippet
+
+
+##############
+#  arethusa  #
+##############
+
+snippet aum "aretusaUtil.map" !b
+arethusaUtil.map(${1:container}, function(el) {
+  $0
+});
+endsnippet
+
+snippet aupa "arethusaUtil.pushAll" !b
+arethusaUtil.pushAll(${1:target}, ${0:pusher});
+endsnippet
+
+snippet am "arethusa module"
+"use strict";
+
+angular.module('arethusa$1').$0
+endsnippet
+
+snippet acm "arehusa morph configuration"
+"${1}" : {
+  "long" : "$2",
+  "short" : "$1",
+  "postag" : "$3"${4:,
+    "style" : {
+    "color" : "$5"
+  }}
+}$0
+endsnippet
+
+
+###############
+#  AngularJS  #
+###############
+
+snippet s "$scope." w!
+$scope.$0
+endsnippet
+
+snippet sf "$scope function" !
+$scope.${1:function_name} = function(${2:args}) {
+	$0
+};
+endsnippet
+
+snippet sv "$scope variable" !
+$scope.${1:var} = ${2:val};
+endsnippet
+
+snippet svc "$scope variable from constructor" !
+$scope.${1:var} = $1;
+endsnippet
+
+snippet sw "scope watch" w
+$scope.$watch(${1:expression}, function(newVal, oldVal) {
+  $0
+});
+endsnippet
+
+snippet sa "scope apply" !b
+scope.$apply($0);
+endsnippet
+
+snippet ngfe "angular.forEach" !
+angular.forEach(${1:var}, function(${2:value}, ${3:key}) {
+	$0
+});
+endsnippet
+
+snippet ngmfa "A factory in a module" w
+factory('${1:factoryName}', function(${2:dependencies}) {
+	var obj = {};
+
+	$0
+
+	return obj;
+});
+endsnippet
+
+snippet ngms "Define an Angular Module Service" w
+service('${1:serviceName}', function(${2:injectables}) {
+	$0
+});
+endsnippet
+
+snippet ngmfi "Define an Angular Module Filter" w
+filter('${1:filterName}', function(${2:injectables}) {
+	return function(input, ${3:args}) {
+		$0
+	};
+})
+endsnippet
+
+snippet ngmd "Define an Angular Module Directive" w
+directive('${1:directiveName}', function(${2:injectables}) {
+	return {
+		$3
+	};
+	$0
+});
+endsnippet
+
+snippet ngmdl "Angular directive with a link function" !b
+directive('${1:directiveName}', function(${2:injectables}) {
+	return {
+    restrict: '${1:A}',
+		link: function(scope, element, attrs) {
+			$0
+		}
+	};
+});
+endsnippet
+
+snippet ngds "Define an isolated scope in an Angular Directive" !b
+scope: {
+  $0
+},
+endsnippet
+
+snippet ngdc "Define a controller inside an Angular Directive"
+controller: function($scope, $element, $attrs${1}) {
+	$2
+},$0
+endsnippet
+
+snippet ngdl "Define a link function inside an Angular Directive"
+link: function(scope, element, attrs) {
+	$0
+}
+endsnippet
+
+snippet ngdr "Define restriction of an Angular Directive" !b
+restrict: '${1:E}',
+$0
+endsnippet
+
+snippet nglc "click event inside a link function" !b
+element.bind('click', function(e) {
+  $0
+});
+endsnippet
+
+
+################
+#  require.js  #
+################
+
+# tbd
+
+############
+#  jsHint  #
+############
+
+snippet hg "let jshint ignore a global variable" !b
+/* global ${0:variable} */
+endsnippet
+
+#############
+#  Jasmine  #
+#############
+
+snippet ngj "angular jasmine file" !b
+"use strict";
+
+describe("${1:instance}", function() {
+	beforeEach(module("${2:module}", function($provide) {
+		$provide.${3:mock_injectables};
+	}));
+
+	describe("${4:function}", function() {
+		${0:ait}
+	});
+});
+endsnippet
+
+snippet desc "Describe block"
+describe('${1:description}', function() {
+	$0
+});
+endsnippet
+
+snippet ait "Angular it block"
+it('${1:description}', inject(function(${2:injectables}) {
+	$0
+}));
+endsnippet
+
+snippet abe "Angular before each"
+beforeEach(module('${1:module}', function($provide) {
+	$provide.value('${2:val}', ${3:obj})
+}));
+endsnippet
+
+snippet ete "expect to equal" !b
+expect(${1:actual}).toEqual(${0:expected});
+endsnippet
+
+snippet etb "expect to be" !b
+expect(${1:actual}).toBe(${0:expected});
+endsnippet
+
+snippet ett "expect to be truthy" !b
+expect(${1:actual}).toBeTruthy();
+endsnippet
+
+snippet etf "expect to be falsy" !b
+expect(${1:actual}).toBeFalsy();
+endsnippet
+
+snippet etd "expect to be defined" !b
+expect(${1:actual}).toBeDefined();
+endsnippet
+
+snippet etud "expect to be undefined" !b
+expect(${1:actual}).toBeUndefined();
+endsnippet
+
+snippet etc "expect to contain" !b
+expect(${1:actual}).toContain(${0:expected};
+endsnippet
+
+# vim:ft=snippets:
