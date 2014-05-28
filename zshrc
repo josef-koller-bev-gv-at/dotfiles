@@ -44,6 +44,9 @@ source $ZSH/oh-my-zsh.sh
 alias g="git status"
 alias gh="git hist"
 alias gpu="gp -u origin $(current_branch)"
+alias grb="git rebase"
+
+alias sagi="sudo apt-get install"
 
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
