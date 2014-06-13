@@ -104,10 +104,10 @@ try {
 }
 endsnippet
 
-snippet vf "var ... = function" !b
-var ${1:function_name} = function(${2:args}) {
+snippet vf "named function" !b
+function ${1:function_name}(${2:args}) {
   $0
-};
+}
 endsnippet
 
 snippet tf "this.function"
@@ -121,7 +121,7 @@ this.${1:variable_name} = ${2:value};
 endsnippet
 
 snippet r "return"
-return $0;
+return $0
 endsnippet
 
 snippet us "use strict" b
@@ -139,13 +139,19 @@ endsnippet
 #  arethusa  #
 ##############
 
-snippet aum "aretusaUtil.map" !b
+snippet aum "aretusaUtil.map" !w
 arethusaUtil.map(${1:container}, function(el) {
   $0
 });
 endsnippet
 
-snippet aupa "arethusaUtil.pushAll" !b
+snippet aui "arethusaUtil.inject" !w
+arethusaUtil.inject(${1:obj}, ${2:container}, function(memo, ${3:args}) {
+  $0
+});
+endsnippet
+
+snippet aupa "arethusaUtil.pushAll" !w
 arethusaUtil.pushAll(${1:target}, ${0:pusher});
 endsnippet
 
@@ -155,15 +161,50 @@ snippet am "arethusa module"
 angular.module('arethusa$1').$0
 endsnippet
 
-snippet acm "arehusa morph configuration"
+snippet acm "arethusa morph configuration"
 "${1}" : {
-  "long" : "$2",
-  "short" : "$1",
-  "postag" : "$3"${4:,
+	"long" : "$2",
+	"short" : "$1",
+	"postag" : "$3"${4:,
     "style" : {
     "color" : "$5"
   }}
 }$0
+endsnippet
+
+snippet ar "arethusa relation configuration" !w
+"${1}" : {
+	"short" : "$1",
+	"long" : "$2"
+}$0
+endsnippet
+
+snippet arn "arethusa relation configuration with nesting" !w
+"${1}" : {
+	"short" : "$1",
+	"long" : "$2",
+	"nested" : {
+		$0
+	}
+}
+endsnippet
+
+
+####################
+#  arethusa-specs  #
+####################
+
+# Mnemomic: arethusa spec mock
+
+snippet asmc "Arethusa mock configurator" !b
+var mockConfigurator = {
+	configurationFor: function(name) {
+		return {};
+	},
+	getRetrievers: function(name) {
+		return {};
+	}
+}
 endsnippet
 
 
@@ -190,13 +231,20 @@ $scope.${1:var} = $1;
 endsnippet
 
 snippet sw "scope watch" w
-$scope.$watch(${1:expression}, function(newVal, oldVal) {
-  $0
+scope.$watch(${1:expression}, function(newVal, oldVal) {
+	${2:if (newVal !== oldVal) {
+		$3
+	}}
+	$0
 });
 endsnippet
 
 snippet sa "scope apply" !b
 scope.$apply($0);
+endsnippet
+
+snippet ngbi "get angular element by id" !w
+angular.element(document.getElementById(${0:id}));
 endsnippet
 
 snippet ngfe "angular.forEach" !
@@ -215,10 +263,24 @@ factory('${1:factoryName}', function(${2:dependencies}) {
 });
 endsnippet
 
+snippet ngmc "Define an Angular Module Controller" w
+controller('${1:controllerName}', function($scope${2:injectables}) {
+	$0
+}),
+endsnippet
+
 snippet ngms "Define an Angular Module Service" w
 service('${1:serviceName}', function(${2:injectables}) {
 	$0
 });
+endsnippet
+
+snippet ngmsi "Define Angular directive with injectables" !w
+service('${1:serviceName}', [
+`!p injectables(t[2], snip)`  function(${2:injectables}) {
+		$0
+	}
+]);
 endsnippet
 
 snippet ngmfi "Define an Angular Module Filter" w
@@ -230,18 +292,52 @@ filter('${1:filterName}', function(${2:injectables}) {
 endsnippet
 
 snippet ngmd "Define an Angular Module Directive" w
-directive('${1:directiveName}', function(${2:injectables}) {
+directive('${1:directiveName}', function() {
 	return {
-		$3
+		restrict: 'A',
+		$0
 	};
-	$0
 });
 endsnippet
 
-snippet ngmdl "Angular directive with a link function" !b
+global !p
+
+def injectables(inj, snip):
+	strings = inj.split(', ')
+	indent = snip._initial_indent + '  '
+	result = ''.join(["%s'%s',\n" % (indent, string) for string in strings])
+	snip.rv = result
+endglobal
+
+
+snippet ngmdi "Define Angular directive with injectables" !w
+directive('${1:directiveName}', [
+`!p injectables(t[2], snip)`  function(${2:injectables}) {
+		return {
+			restrict: 'A',
+			$0
+		};
+	}
+]);
+endsnippet
+
+snippet ngmdil "Define Angular directive with injectables" !w
+directive('${1:directiveName}', [
+`!p injectables(t[2], snip)`  function(${2:injectables}) {
+		return {
+			restrict: '${3:A}',
+			link: function(scope, element, attrs) {
+				$0
+			}
+		};
+	}
+]);
+endsnippet
+
+snippet ngmdl "Angular directive with a link function" !w
 directive('${1:directiveName}', function(${2:injectables}) {
 	return {
-    restrict: '${1:A}',
+		restrict: '${1:A}',
 		link: function(scope, element, attrs) {
 			$0
 		}
@@ -265,6 +361,10 @@ snippet ngdl "Define a link function inside an Angular Directive"
 link: function(scope, element, attrs) {
 	$0
 }
+endsnippet
+
+snippet ngea "Eval an elements attribute" b
+scope.$eval(attrs.${0:attr});
 endsnippet
 
 snippet ngdr "Define restriction of an Angular Directive" !b
