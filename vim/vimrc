@@ -183,7 +183,7 @@ augroup BWCCreateDir
 augroup END
 autocmd BufWritePre * :call s:MkNonExDir(expand('<afile>'), +expand('<abuf>'))
 
-map <leader>k ggVG=<CR>
+map <leader>k =G<CR>
 
 " format xml
 au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
