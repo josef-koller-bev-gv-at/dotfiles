@@ -196,6 +196,9 @@ au FileType cpp nnoremap <leader>h :vsp %<.h<CR>
 au FileType cpp map <Leader>k :%pyf ~/.vim/clang-format.py<CR>
 au FileType cpp imap <C-K> <ESC>:pyf ~/.vim/clang-format.py<CR>i
 
+" open .md files as markdown and not as modula2
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+
 " -----------------------------------------------------------
 " Plugin configuration
 " -----------------------------------------------------------
