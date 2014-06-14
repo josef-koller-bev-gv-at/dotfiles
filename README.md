@@ -12,6 +12,12 @@ To use powerline fonts, execute `install-powerline-fonts.sh` and
 select a powerline font in the terminal preferences (for example
 `Droid Sans Mono for Powerline`).
 
+
+There are two scripts to customize the settings:
+ - `before.vimrc` in which the leader should be defined
+ - `after.vimrc` to change user specific settings like the colorscheme
+
+
 For YouCompleteMe with C/C++ support run:
 ```
 cd ~/.vundle/YouCompleteMe
