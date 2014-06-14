@@ -2,6 +2,7 @@
 ## Installation
 Call the `install.sh` script.
 
+### Vim
 Get all vim plugins by executing (in vim):
 ```
 :BundleInstall
@@ -15,4 +16,15 @@ For YouCompleteMe with C/C++ support run:
 ```
 cd ~/.vundle/YouCompleteMe
 ./install.sh --clang-completer --system-libclang
+```
+
+### Git
+The `.gitconfig` file loads a `.gitconfig.user` file which must 
+be created manually and should user specific settings like:
+```
+[user]
+  name = Username
+  email = username@example.com
+[github]
+  user = username
 ```
