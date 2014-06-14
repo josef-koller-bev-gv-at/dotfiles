@@ -54,8 +54,8 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 export TERM=xterm-256color
 
-# Customize to your needs...
-source ~/.zshrc-custom
+# Customize to your needs... (like custom PATH)
+source ~/.zshrc.user
 
 # Make directory and change into it
 function mc {
