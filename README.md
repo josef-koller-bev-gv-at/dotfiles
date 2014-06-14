@@ -34,3 +34,7 @@ be created manually and should user specific settings like:
 [github]
   user = username
 ```
+
+### Zsh
+The zsh settings can be customized in the `.zshrc.user` file
+where further paths can be added to PATH.
