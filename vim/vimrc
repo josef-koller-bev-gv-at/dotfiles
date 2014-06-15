@@ -32,6 +32,7 @@ Bundle 'sjl/gundo.vim'
 Bundle 'pangloss/vim-javascript'
 Bundle 'Shutnik/jshint2.vim'
 Bundle 'Raimondi/delimitMate'
+Bundle 'marijnh/tern_for_vim'
 
 " Color themes
 Bundle 'altercation/vim-colors-solarized'
