@@ -148,6 +148,8 @@ set nrformats=
 " Remap %:h<Tab> to %% for edit, write, saveas and read commands
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
+" Autosave when focus is lost
+au BufLeave,FocusLost * silent! update
 
 "Wrap enables wrapping and rebinds j and k
 command! -nargs=* Wrap call s:EnableWrap()
