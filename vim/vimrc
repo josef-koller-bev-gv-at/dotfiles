@@ -41,6 +41,7 @@ Bundle 'jonathanfilip/vim-lucius'
 Bundle 'tomasr/molokai'
 Bundle 'ratazzi/blackboard.vim'
 Bundle 'sjl/badwolf'
+Bundle 'Lokaltog/vim-distinguished'
 "Bundle 'Lokaltog/vim-easymotion'
 "Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 "Bundle 'tpope/vim-rails.git'
