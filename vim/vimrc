@@ -7,7 +7,7 @@ set nocompatible
 filetype off                  " required!
 
 set rtp+=~/.vim/bundle/vundle
-call vundle#rc("~/.vundle")
+call vundle#begin("~/.vundle")
 
 " let Vundle manage Vundle
 " required!
@@ -40,6 +40,7 @@ Bundle 'jonathanfilip/vim-lucius'
 Bundle 'tomasr/molokai'
 Bundle 'ratazzi/blackboard.vim'
 Bundle 'sjl/badwolf'
+Bundle 'Lokaltog/vim-distinguished'
 "Bundle 'Lokaltog/vim-easymotion'
 "Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 "Bundle 'tpope/vim-rails.git'
@@ -47,6 +48,7 @@ Bundle 'sjl/badwolf'
 "Bundle 'L9'
 "Bundle 'FuzzyFinder'
 "Bundle 'git://git.wincent.com/command-t.git'
+call vundle#end()
 "
 " Additional bundles and before configuration like <leader>
 if filereadable(expand("~/.vim/before.vimrc"))
@@ -244,13 +246,20 @@ function! g:UltiSnips_Complete()
 endfunction
 
 au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsExpandTrigger = "<c-j>"
 let g:UltiSnipsListSnippets="<c-e>"
 
 " YouCompleteMe
+let g:ycm_add_preview_to_completeopt = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 " don't ask before using YCM
 let g:ycm_confirm_extra_conf = 0
+
+" Tern for vim
+au FileType javascript nnoremap <leader>jd :TernDef<CR>
+
 
 " fugitive
 nnoremap <leader>gs :Gstatus<CR>
