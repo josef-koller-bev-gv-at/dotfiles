@@ -256,6 +256,10 @@ nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 " don't ask before using YCM
 let g:ycm_confirm_extra_conf = 0
 
+" Tern for vim
+au FileType javascript nnoremap <leader>jd :TernDef<CR>
+
+
 " fugitive
 nnoremap <leader>gs :Gstatus<CR>
 
