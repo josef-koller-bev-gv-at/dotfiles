@@ -252,6 +252,8 @@ let g:UltiSnipsExpandTrigger = "<c-j>"
 let g:UltiSnipsListSnippets="<c-e>"
 
 " YouCompleteMe
+let g:ycm_add_preview_to_completeopt = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 " don't ask before using YCM
 let g:ycm_confirm_extra_conf = 0
