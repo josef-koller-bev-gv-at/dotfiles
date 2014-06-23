@@ -24,6 +24,12 @@ cd ~/.vundle/YouCompleteMe
 ./install.sh --clang-completer --system-libclang
 ```
 
+For YouCompleteMe with JavaScript support run:
+```
+cd ~/.vundle/tern_for_vim
+npm install
+```
+
 ### Git
 The `.gitconfig` file loads a `.gitconfig.user` file which must 
 be created manually and should user specific settings like:
