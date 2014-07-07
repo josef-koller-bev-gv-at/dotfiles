@@ -35,6 +35,7 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'marijnh/tern_for_vim'
 
 " Color themes
+Plugin 'https://github.com/vim-scripts/ScrollColors'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'jonathanfilip/vim-lucius'
 Bundle 'tomasr/molokai'
