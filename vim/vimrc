@@ -75,6 +75,8 @@ set hidden
 " Increase command history capacity
 set history=400
 
+set autoread
+
 " Whitespace
 set nowrap                        " don't wrap lines
 set tabstop=2                     " a tab is two spaces
