@@ -76,6 +76,7 @@ set hidden
 set history=400
 
 set autoread
+set autowriteall
 
 " Whitespace
 set nowrap                        " don't wrap lines
