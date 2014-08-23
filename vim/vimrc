@@ -273,7 +273,7 @@ au FileType javascript nnoremap <leader>jd :TernDef<CR>
 nnoremap <leader>gs :Gstatus<CR>
 
 " gundo
-nnoremap <leader>z :GundoToggle<CR>
+nnoremap <leader>u :GundoToggle<CR>
 
 " Customizations like colortheme or key bindings
 if filereadable(expand("~/.vim/after.vimrc"))
