@@ -140,6 +140,9 @@ nnoremap <Leader>f :Ack
 " map <C-]> to <Leader>g
 nnoremap <Leader>g <C-]>
 
+" map jk to esc
+inoremap jk <esc>
+
 " Write file as super user
 cnoremap wsu w !sudo tee % > /dev/null
 
