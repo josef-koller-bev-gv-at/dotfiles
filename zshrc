@@ -43,7 +43,7 @@ source $ZSH/oh-my-zsh.sh
 # aliases
 alias g="git status"
 alias gh="git hist"
-alias gpu="gp -u origin $(current_branch)"
+alias gpu="git gpu"
 alias grb="git rebase"
 
 alias sagi="sudo apt-get install"
