@@ -12,6 +12,7 @@
   ci = commit
   st = status
   co = checkout
+  gpu = push -u origin HEAD
   hist = log --pretty=format:\"%h %ad | %s %b%d [%an]\" --graph --date=short
   br = branch
   type = cat-file -t
