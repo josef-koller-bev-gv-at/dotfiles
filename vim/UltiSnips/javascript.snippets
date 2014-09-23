@@ -423,6 +423,18 @@ it('${1:description}', inject(function(${2:injectables}) {
 }));
 endsnippet
 
+snippet it "it block"
+it('${1:description}', function() {
+	$0
+});
+endsnippet
+
+snippet be "before each"
+beforeEach(function() {
+	$0
+});
+endsnippet
+
 snippet abe "Angular before each"
 beforeEach(module('${1:module}', function($provide) {
 	$provide.value('${2:val}', ${3:obj})
