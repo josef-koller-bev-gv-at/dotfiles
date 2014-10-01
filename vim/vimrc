@@ -155,6 +155,11 @@ set t_ut=
 " yields 008 and not 010
 set nrformats=
 
+" uses paste mode when pasting from the clipboard in insert mode
+" and leaves it immeadiately after
+inoremap <C-v> <esc>:set paste<cr>a<C-r>+<esc>:set nopaste<cr>a
+inoremap <C-b> <esc>:set paste<cr>a<C-r>*<esc>:set nopaste<cr>a
+
 " Remap %:h<Tab> to %% for edit, write, saveas and read commands
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
