@@ -101,6 +101,10 @@ set laststatus=2
 set scrolloff=3
 set sidescrolloff=5
 
+" Disable backup and swap files
+set nobackup
+set noswapfile
+
 " always show line numbers
 set number
 
