@@ -35,6 +35,7 @@ Bundle 'Shutnik/jshint2.vim'
 Bundle 'Raimondi/delimitMate'
 Bundle 'marijnh/tern_for_vim'
 Bundle 'Lokaltog/vim-easymotion'
+Plugin 'tacahiroy/ctrlp-funky'
 
 " Color themes
 Plugin 'https://github.com/vim-scripts/ScrollColors'
@@ -244,6 +245,13 @@ let g:syntastic_loc_list_height = 5
 
 " Ctrlp
 let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files . -co --exclude-standard']
+let g:ctrlp_extensions = ['funky']
+
+" CtrlPFunky
+let g:ctrlp_funky_syntax_highlight = 1
+nnoremap <Leader>fu :CtrlPFunky<Cr>
+" narrow the list down with a word under cursor
+nnoremap <Leader>fU :execute 'CtrlPFunky ' . expand('<cword>')<Cr>
 
 " airline
 let g:airline_powerline_fonts=1
