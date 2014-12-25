@@ -462,4 +462,84 @@ snippet etc "expect to contain" !b
 expect(${1:actual}).toContain(${0:expected};
 endsnippet
 
+####################
+#  ngdoc snippets  #
+####################
+
+snippet dd "ngdoc directive" !b
+/**
+ * @ngdoc directive
+ * @name ${1:arethusa.}${2}
+ * @restrict ${3:A}
+ *
+ * @description
+ * ${4:TODO}
+ *
+ */
+endsnippet
+
+snippet ds "ngdoc service" !b
+/**
+ * @ngdoc service
+ * @name ${1:arethusa.}${2}
+ *
+ * @description
+ * ${4:TODO}
+ *
+ */
+endsnippet
+
+snippet df "ngdoc function" !b
+/**
+ * @ngdoc function
+ * @name arethusa.core.globalSettings#$1
+ * @methodOf arethusa.core.globalSettings
+ *
+ * @description
+ * ${2:TODO}
+ */
+endsnippet
+
+snippet dp "ngdoc param" !w
+@param {${1}} ${2:name} ${3:description}
+endsnippet
+
+snippet dprs "ngdoc property (short)" !w
+@property {${1}} ${2:name} ${3:description}
+endsnippet
+
+snippet dpr "ngdoc property" !w
+/**
+ * @ngdoc property
+ * @name $1
+ * @propertyOf arethusa.core.globalSettings
+ * @description
+ * ${2:TODO}
+ */
+endsnippet
+
+snippet dq "ngdoc requires" !w
+@requires ${1:arethusa.core.}$2
+endsnippet
+
+snippet dr "ngdoc return" !w
+@returns {${1}} ${2}
+endsnippet
+
+snippet dl "ngdoc link" !w
+{@link ${1:arethusa.}${2}}
+endsnippet
+
+snippet daf "ngdoc function through arethusa-ngdocs-generator" !b
+// @arethusa-function
+endsnippet
+
+snippet dap "ngdoc property through arethusa-ngdocs-generator" !b
+// @arethusa-property
+endsnippet
+
+snippet dae "ngdoc event through arethusa-ngdocs-generator" !b
+// @arethusa-event
+endsnippet
+
 # vim:ft=snippets:
