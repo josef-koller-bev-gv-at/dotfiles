@@ -36,6 +36,7 @@ Bundle 'Raimondi/delimitMate'
 Bundle 'marijnh/tern_for_vim'
 Bundle 'Lokaltog/vim-easymotion'
 Plugin 'tacahiroy/ctrlp-funky'
+Plugin 'lfilho/cosco.vim'
 
 " Color themes
 Plugin 'https://github.com/vim-scripts/ScrollColors'
@@ -298,6 +299,10 @@ nnoremap <leader>gs :Gstatus<CR>
 
 " gundo
 nnoremap <leader>u :GundoToggle<CR>
+
+" cosco.vim
+autocmd FileType javascript,css noremap <silent> <leader>, :call cosco#commaOrSemiColon()<CR>
+autocmd FileType javascript,css inoremap <silent> <leader>, <c-o>:call cosco#commaOrSemiColon()<CR>
 
 " Customizations like colortheme or key bindings
 if filereadable(expand("~/.vim/after.vimrc"))
