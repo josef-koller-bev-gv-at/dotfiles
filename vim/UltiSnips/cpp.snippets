@@ -19,7 +19,20 @@ snippet inc "#include local header (inc)" !
 #include "./${1:`!p snip.rv = snip.basename + '.h'`}"
 endsnippet
 
+snippet doc "Documentation" b!
+/**
+ * \brief $1
+ *
+ * $2
+ */
+endsnippet
+
 snippet cl "class .. (class)" !
+/**
+ * \brief $3
+ *
+ * $4
+ */
 class ${1:`!p 
 def lower_case_underscore_to_camel_case(string):
     """Convert string or unicode from lower-case underscore to camel-case"""
