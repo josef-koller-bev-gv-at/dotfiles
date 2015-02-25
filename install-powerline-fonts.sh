@@ -1,3 +1,3 @@
 mkdir ~/.fonts
-git clone git@github.com:Lokaltog/powerline-fonts.git ~/.fonts
+git clone https://github.com/powerline/fonts.git ~/.fonts
 sudo fc-cache -vf ~/.fonts
