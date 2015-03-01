@@ -112,6 +112,10 @@ set noswapfile
 " always show line numbers
 set number
 
+" enable per project vimrc files, but disable unsafe commands
+set exrc
+set secure
+
 " tab navigation
 nnoremap <C-tab>   :tabnext<CR>
 nnoremap <S-k>     :tabnext<CR>
