@@ -248,6 +248,12 @@ let g:syntastic_loc_list_height = 5
 " Ctrlp
 let g:ctrlp_user_command = ['.git/', 'cd %s && git ls-files . -co --exclude-standard']
 let g:ctrlp_extensions = ['funky']
+" Open Ctrlp prepopulated with the current filename without extension
+" Can be used to switch between header and cpp files or test files
+" Header and cpp files can be switched faster with <leader>h for header
+" and <leader>c for cpp if they are in the same directory.
+nmap <Leader>fs :let g:ctrlp_default_input = expand('%:t:r') \|
+    \ call ctrlp#init(0) \| unlet g:ctrlp_default_input<CR>
 
 " CtrlPFunky
 let g:ctrlp_funky_syntax_highlight = 1
