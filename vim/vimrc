@@ -37,6 +37,7 @@ Bundle 'marijnh/tern_for_vim'
 Bundle 'Lokaltog/vim-easymotion'
 Plugin 'tacahiroy/ctrlp-funky'
 Plugin 'lfilho/cosco.vim'
+Plugin 'editorconfig/editorconfig-vim'
 
 " Color themes
 Plugin 'https://github.com/vim-scripts/ScrollColors'
