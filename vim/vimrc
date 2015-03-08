@@ -235,8 +235,7 @@ au FileType cpp imap <C-K> <ESC>:pyf ~/.vim/clang-format.py<CR>i
 " javascript, html, css, scss
 au FileType javascript nnoremap <leader>k :call JsBeautify()<cr>
 au FileType html nnoremap <leader>k :call HtmlBeautify()<cr>
-au FileType css nnoremap <leader>k :call CSSBeautify()<cr>
-au FileType scss nnoremap <leader>k :call CSSBeautify()<cr>
+au FileType css, scss nnoremap <leader>k :call CSSBeautify()<cr>
 
 au FileType cpp set iskeyword-=-
 
