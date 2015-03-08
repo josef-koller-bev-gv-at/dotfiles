@@ -38,6 +38,8 @@ Bundle 'Lokaltog/vim-easymotion'
 Plugin 'tacahiroy/ctrlp-funky'
 Plugin 'lfilho/cosco.vim'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'maksimr/vim-jsbeautify'
+Plugin 'einars/js-beautify'
 
 " Color themes
 Plugin 'https://github.com/vim-scripts/ScrollColors'
@@ -229,6 +231,12 @@ au FileType cpp nnoremap <leader>h :vsp %<.h<CR>
 " clang-format
 au FileType cpp map <Leader>k :%pyf ~/.vim/clang-format.py<CR>
 au FileType cpp imap <C-K> <ESC>:pyf ~/.vim/clang-format.py<CR>i
+
+" javascript, html, css, scss
+au FileType javascript nnoremap <leader>k :call JsBeautify()<cr>
+au FileType html nnoremap <leader>k :call HtmlBeautify()<cr>
+au FileType css nnoremap <leader>k :call CSSBeautify()<cr>
+au FileType scss nnoremap <leader>k :call CSSBeautify()<cr>
 
 au FileType cpp set iskeyword-=-
 
