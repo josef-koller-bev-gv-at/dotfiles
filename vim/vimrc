@@ -11,7 +11,7 @@ call vundle#begin("~/.vundle")
 
 " let Vundle manage Vundle
 " required!
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 " Bundles
 Bundle 'tpope/vim-fugitive'
