@@ -176,6 +176,12 @@ set nrformats=
 inoremap <C-v> <esc>:set paste<cr>a<C-r>+<esc>:set nopaste<cr>a
 inoremap <C-b> <esc>:set paste<cr>a<C-r>*<esc>:set nopaste<cr>a
 
+" use leader y and p to copy and paste using the clipboard
+nnoremap <leader>y "+y
+vnoremap <leader>y "+y
+nnoremap <leader>p "+gP
+vnoremap <leader>p "+gP
+
 " Add dash as keyword so that autocompletion of lisp-style works
 set iskeyword+=-
 
