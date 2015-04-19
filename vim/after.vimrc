@@ -1,4 +1,4 @@
-let g:badwolf_darkgutter = 1
-colorscheme badwolf
+let g:gruvbox_italic=0
+colorscheme gruvbox
 
 set cursorline
