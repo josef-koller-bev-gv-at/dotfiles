@@ -16,8 +16,19 @@ curly_bracket_next_line = false
 spaces_around_operators = true
 space_after_control_statements = true
 space_after_anonymous_functions = false
+keep_array_indentation = true
 spaces_in_brackets = false
+preserve_newlines = true
+max_preserve_newlines = 2
+jslint_happy = true
+brace_style = collapse
+wrap_line_length = 80
 
-[**.yml, **.html, **.css]
+[**.html]
+indent_style = space
+indent_size = 2
+trim_trailing_whitespace = true
+
+[**.css]
 trim_trailing_whitespace = true
 
