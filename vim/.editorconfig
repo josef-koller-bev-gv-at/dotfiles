@@ -1,17 +1,15 @@
-# For more information see: http://EditorConfig.org
+; For more information see: http://EditorConfig.org
 
-# top-most EditorConfig file
+; top-most EditorConfig file
 root = true
 
-# Unix-style newlines with a newline ending every file
-[**]
+; Unix-style newlines with a newline ending every file
+[**.js]
 end_of_line = lf
 insert_final_newline = true
 indent_style = space
 indent_size = 2
 tab_width = 2
-
-[**.js, **.json]
 trim_trailing_whitespace = true
 quote_type = single
 curly_bracket_next_line = false
