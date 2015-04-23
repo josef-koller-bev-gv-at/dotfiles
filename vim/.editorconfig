@@ -13,14 +13,10 @@ tab_width = 2
 trim_trailing_whitespace = true
 quote_type = single
 curly_bracket_next_line = false
-spaces_around_operators = true
-space_after_control_statements = true
-space_after_anonymous_functions = false
-keep_array_indentation = true
+keep_array_indentation = false
 spaces_in_brackets = false
 preserve_newlines = true
-max_preserve_newlines = 2
-jslint_happy = true
+max_preserve_newlines = 3
 brace_style = collapse
 wrap_line_length = 80
 
