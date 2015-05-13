@@ -179,8 +179,10 @@ inoremap <C-b> <esc>:set paste<cr>a<C-r>*<esc>:set nopaste<cr>a
 " use leader y and p to copy and paste using the clipboard
 nnoremap <leader>y "+y
 vnoremap <leader>y "+y
-nnoremap <leader>p "+gP
-vnoremap <leader>p "+gP
+nnoremap <leader>p "+gp
+vnoremap <leader>p "+gp
+nnoremap <leader>P "+gP
+vnoremap <leader>P "+gP
 
 " Add dash as keyword so that autocompletion of lisp-style works
 set iskeyword+=-
