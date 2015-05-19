@@ -36,5 +36,6 @@ indent_style = space
 indent_size = 2
 trim_trailing_whitespace = true
 newline_between_rules = true
+selector_separator_newline = true
 wrap_line_length = 80
 
