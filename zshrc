@@ -45,6 +45,7 @@ alias g="git status"
 alias gh="git hist"
 alias gpu="git gpu"
 alias grb="git rebase"
+alias gdc="git diff --cached"
 
 alias sagi="sudo apt-get install"
 
