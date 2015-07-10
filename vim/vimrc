@@ -253,6 +253,7 @@ au FileType sh autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 " open .md files as markdown and not as modula2
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+autocmd BufNewFile,BufReadPost *.hglsl set filetype=glsl
 
 " -----------------------------------------------------------
 " Plugin configuration
