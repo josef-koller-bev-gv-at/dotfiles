@@ -171,6 +171,9 @@ set t_ut=
 " yields 008 and not 010
 set nrformats=
 
+" use leader r to start renaming of variable under cursor
+:nnoremap <Leader>r :%s/\<<C-r><C-w>\>//gc<Left><Left><Left>
+
 " uses paste mode when pasting from the clipboard in insert mode
 " and leaves it immeadiately after
 inoremap <C-v> <esc>:set paste<cr>a<C-r>+<esc>:set nopaste<cr>a
