@@ -27,6 +27,7 @@ Plugin 'tpope/vim-fireplace'
 Plugin 'vim-scripts/paredit.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-commentary'
 Plugin 'mileszs/ack.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'sjl/gundo.vim'
@@ -265,6 +266,9 @@ autocmd BufNewFile,BufReadPost *.hglsl set filetype=glsl
 let g:tex_flavor='latex'
 let g:Tex_DefaultTargetFormat='pdf'
 let g:Tex_CompileRule_pdf='pdflatex -shell-escape -interaction=nonstopmode $*'
+
+" commentary
+autocmd FileType cpp,cuda setlocal commentstring=//\ %s
 
 " Syntastic
 let g:syntastic_cpp_compiler = 'g++'
