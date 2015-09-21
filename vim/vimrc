@@ -28,6 +28,7 @@ Plugin 'vim-scripts/paredit.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-unimpaired'
 Plugin 'mileszs/ack.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'sjl/gundo.vim'
@@ -333,6 +334,13 @@ let g:ycm_confirm_extra_conf = 0
 " Tern for vim
 au FileType javascript nnoremap <leader>jd :TernDef<CR>
 
+" Unimpaired
+nmap ü [
+nmap + ]
+omap ü [
+omap + ]
+xmap ü [
+xmap + ]
 
 " fugitive
 nnoremap <leader>gs :Gstatus<CR>
