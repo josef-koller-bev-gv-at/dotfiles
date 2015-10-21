@@ -5,7 +5,7 @@ Call the `install.sh` script.
 ### Vim
 Get all vim plugins by executing (in vim):
 ```
-:BundleInstall
+:PluginInstall
 ```
 
 To use powerline fonts, execute `install-powerline-fonts.sh` and
@@ -21,7 +21,7 @@ There are two scripts to customize the settings:
 For YouCompleteMe with C/C++ support run:
 ```
 cd ~/.vundle/YouCompleteMe
-./install.sh --clang-completer --system-libclang
+./install.py --clang-completer --system-libclang --system-boost
 ```
 
 For YouCompleteMe with JavaScript support run:
