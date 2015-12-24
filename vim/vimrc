@@ -54,13 +54,7 @@ Plugin 'ratazzi/blackboard.vim'
 Plugin 'sjl/badwolf'
 Plugin 'Lokaltog/vim-distinguished'
 Plugin 'flazz/vim-colorschemes'
-"Plugin 'Lokaltog/vim-easymotion'
-"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-"Plugin 'tpope/vim-rails.git'
-" vim-scripts repos
-"Plugin 'L9'
-"Plugin 'FuzzyFinder'
-"Plugin 'git://git.wincent.com/command-t.git'
+
 call vundle#end()
 "
 " Additional bundles and before configuration like <leader>
