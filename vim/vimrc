@@ -43,6 +43,7 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'einars/js-beautify'
 Plugin 'tikhomirov/vim-glsl'
+Plugin 'christoomey/vim-tmux-navigator'
 
 " Color themes
 Plugin 'https://github.com/vim-scripts/ScrollColors'
