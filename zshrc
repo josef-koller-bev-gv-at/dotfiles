@@ -47,6 +47,7 @@ alias gpu="git gpu"
 alias grb="git rebase"
 alias gdc="git diff --cached"
 alias gst="git stash"
+alias git-remote-cleanup="git remote prune origin"
 
 alias sagi="sudo apt-get install"
 
