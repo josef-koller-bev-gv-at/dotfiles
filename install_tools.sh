@@ -24,7 +24,7 @@ cd $USER_HOME
 sudo apt-get install libc-dev-bin libc6 libc6:i386 libc6-dev libcurl3 libglademm-2.4-1c2a libgtkmm-2.4-1c2a cmake g++-4.7 build-essential glibc-doc glibc-doc valgrind locales python-dev -y
 
 #GIT
-if [ -e $INSTALLED/git-2.3.1 ];
+if [ -e $INSTALLED/git-2.7.1 ];
 then
 	echo "GIT already installed."
 else
@@ -33,15 +33,15 @@ else
 
 	#load source and install
 	cd $USER_SOURCES
-  wget https://github.com/git/git/archive/v2.3.1.tar.gz
-  tar -xf v2.3.1.tar.gz
-  cd git-2.3.1
+  wget https://github.com/git/git/releases/tag/v2.7.1
+  tar -xf v2.7.1.tar.gz
+  cd git-2.7.1
   ./configure
   make
   sudo make install
 
   echo "installed GIT successfully"
-  touch $INSTALLED/git-2.3.1
+  touch $INSTALLED/git-2.7.1
 fi
 
 #ZSH
