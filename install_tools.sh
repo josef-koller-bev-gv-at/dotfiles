@@ -33,62 +33,62 @@ else
 
 	#load source and install
 	cd $USER_SOURCES
-	wget https://github.com/git/git/archive/v2.3.1.tar.gz
-	tar -xf v2.3.1.tar.gz
-	cd git-2.3.1
-	./configure
-	make
-	sudo make install
+  wget https://github.com/git/git/archive/v2.3.1.tar.gz
+  tar -xf v2.3.1.tar.gz
+  cd git-2.3.1
+  ./configure
+  make
+  sudo make install
 
-	echo "installed GIT successfully"
-	touch $INSTALLED/git-2.3.1
+  echo "installed GIT successfully"
+  touch $INSTALLED/git-2.3.1
 fi
 
 #ZSH
 if [ -e $INSTALLED/oh-my-zsh ];
 then
-	echo "ZSH already installed."
+  echo "ZSH already installed."
 else
-	sudo apt-get install zsh -y
-	chsh -s /bin/zsh $USER_NAME
-	sudo apt-get install curl -y
-	curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+  sudo apt-get install zsh -y
+  chsh -s /bin/zsh $USER_NAME
+  sudo apt-get install curl -y
+  curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 
-	echo "installed ZSH successfully"
-	touch $INSTALLED/oh-my-zsh
+  echo "installed ZSH successfully"
+  touch $INSTALLED/oh-my-zsh
 fi
 
 #VIM
 if [ -e $INSTALLED/vim ];
 then
-	echo "VIM already installed."
+  echo "VIM already installed."
 else
-	cd $USER_SOURCES
-	git clone --depth 1 https://github.com/b4winckler/vim.git
-	sudo apt-get install libncurses5-dev libgnome2-dev libgnomeui-dev libgtk2.0-dev libatk1.0-dev libbonoboui2-dev libcairo2-dev libx11-dev libxpm-dev libxt-dev exuberant-ctags ack-grep libpython2.7-dev -y
-	cd vim
-	cd src
-	make distclean
-	./configure --with-features=huge --enable-rubyinterp --enable-pythoninterp
-	make -j 12
-	sudo make install
+  cd $USER_SOURCES
+  git clone --depth 1 https://github.com/b4winckler/vim.git
+  sudo apt-get install libncurses5-dev libgnome2-dev libgnomeui-dev libgtk2.0-dev libatk1.0-dev libbonoboui2-dev libcairo2-dev libx11-dev libxpm-dev libxt-dev exuberant-ctags ack-grep libpython2.7-dev -y
+  cd vim
+  cd src
+  make distclean
+  ./configure --with-features=huge --enable-rubyinterp --enable-pythoninterp
+  make -j 12
+  sudo make install
 
-	echo "installed VIM successfully"
-	touch $INSTALLED/vim
+  echo "installed VIM successfully"
+  touch $INSTALLED/vim
 fi
 
 #Dotfiles
 if [ -e $INSTALLED/dotfiles ];
 then
-	echo "Dotfiles already installed."
+  echo "Dotfiles already installed."
 else
   sudo apt-get install libclang-3.5-dev clang-format-3.5 -y
-	cd $USER_SOURCES
-	git clone https://github.com/Christof/dotfiles
-	cd dotfiles
-	./install.sh
-	#TODO user specific files
+  cd $USER_SOURCES
+  git clone https://github.com/Christof/dotfiles
+  cd dotfiles
+  ./install.sh
+  #TODO user specific files
 
-	echo "installed Dotfiles successfully."
-	touch $INSTALLED/dotfiles
+  echo "installed Dotfiles successfully."
+  touch $INSTALLED/dotfiles
 fi
