@@ -26,13 +26,13 @@ sudo apt-get install libc-dev-bin libc6 libc6:i386 libc6-dev libcurl3 libglademm
 #GIT
 if [ -e $INSTALLED/git-2.7.1 ];
 then
-	echo "GIT already installed."
+  echo "GIT already installed."
 else
-	#Prerequisites
-	sudo apt-get install libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev autoconf -y
+  #Prerequisites
+  sudo apt-get install libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev autoconf -y
 
-	#load source and install
-	cd $USER_SOURCES
+  #load source and install
+  cd $USER_SOURCES
   wget https://github.com/git/git/archive/v2.7.1.tar.gz
   tar -xf v2.7.1.tar.gz
   cd git-2.7.1
