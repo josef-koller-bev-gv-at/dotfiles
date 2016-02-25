@@ -29,13 +29,14 @@ then
 	echo "GIT already installed."
 else
 	#Prerequisites
-	sudo apt-get install libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev -y
+	sudo apt-get install libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev autoconf -y
 
 	#load source and install
 	cd $USER_SOURCES
-  wget https://github.com/git/git/releases/tag/v2.7.1
+  wget https://github.com/git/git/archive/v2.7.1.tar.gz
   tar -xf v2.7.1.tar.gz
   cd git-2.7.1
+  make configure
   ./configure
   make
   sudo make install
