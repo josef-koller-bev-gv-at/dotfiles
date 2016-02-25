@@ -27,16 +27,16 @@ else
   touch $INSTALLED/ruby-2.2.1
 fi
 
-if [ -e $INSTALLED/tmux-1.9a ];
+if [ -e $INSTALLED/tmux-2.1 ];
 then
 	echo "TMUX already installed."
 else
   sudo apt-get install libevent-dev xclip -y
   cd $USER_SOURCES
-  wget http://netcologne.dl.sourceforge.net/project/tmux/tmux/tmux-1.9/tmux-1.9a.tar.gz
-  tar -xvf tmux-1.9a.tar.gz
+  wget https://github.com/tmux/tmux/releases/download/2.1/tmux-2.1.tar.gz
+  tar -xvf tmux-2.1.tar.gz
 
-  cd tmux-1.9a
+  cd tmux-*
   ./configure
   make -j 12
   sudo make install
@@ -45,6 +45,6 @@ else
   echo "Ensure that gem bin ('~/.gem/ruby/2.2.1/bin') is in the path"
 
   echo "installed TMUX successfully."
-  touch $INSTALLED/tmux-1.9a
+  touch $INSTALLED/tmux-2.1
 fi
 
