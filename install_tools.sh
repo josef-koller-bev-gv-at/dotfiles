@@ -65,11 +65,9 @@ then
   echo "VIM already installed."
 else
   cd $USER_SOURCES
-  git clone --depth 1 https://github.com/b4winckler/vim.git
+  git clone --depth 1 https://github.com/vim/vim.git
   sudo apt-get install libncurses5-dev libgnome2-dev libgnomeui-dev libgtk2.0-dev libatk1.0-dev libbonoboui2-dev libcairo2-dev libx11-dev libxpm-dev libxt-dev exuberant-ctags ack-grep libpython2.7-dev -y
   cd vim
-  cd src
-  make distclean
   ./configure --with-features=huge --enable-rubyinterp --enable-pythoninterp
   make -j 12
   sudo make install
