@@ -6,12 +6,12 @@ set nocompatible
 
 filetype off                  " required!
 
-set rtp+=~/.vim/bundle/vundle
+set rtp+=~/.vundle/vundle
 call vundle#begin("~/.vundle")
 
 " let Vundle manage Vundle
 " required!
-Plugin 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
 " Plugins
 Plugin 'tpope/vim-fugitive'
