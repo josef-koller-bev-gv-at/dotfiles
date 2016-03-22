@@ -2,7 +2,7 @@
 ## Installation
 First download and install the `install_tools.sh` script:
 ```sh
-sh -c "$(wget https://github.com/Christof/dotfiles/blob/master/install_tools.sh)"
+sh -c "$(wget https://raw.githubusercontent.com/Christof/dotfiles/master/install_tools.sh)"
 ```
 This installs:
 - git
