@@ -1,6 +1,16 @@
 #dotfiles
 ## Installation
-Call the `install.sh` script.
+First download and install the `install_tools.sh` script:
+```sh
+sh -c "$(wget https://github.com/Christof/dotfiles/blob/master/install_tools.sh)"
+```
+This installs:
+- git
+- zsh
+- oh-my-zsh
+- vim
+
+Afterwards it downloads the `dotfiles` repository and calls `install.sh` to create aliases to the config files.
 
 ### Vim
 Get all vim plugins by executing (in vim):
