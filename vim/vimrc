@@ -247,6 +247,9 @@ au FileType javascript nnoremap <leader>k :call JsBeautify()<cr>
 au FileType html nnoremap <leader>k :call HtmlBeautify()<cr>
 au FileType css,scss nnoremap <leader>k :call CSSBeautify()<cr>
 
+" typescript
+au FileType typescript nnoremap <leader>k :%!tsfmt --stdin<cr>
+
 au FileType cpp set iskeyword-=-
 
 " Delete trailing whitespace
