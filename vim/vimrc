@@ -239,20 +239,20 @@ map <leader>k =G<CR>
 au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
 
 " c++
-au FileType cpp nnoremap <leader>c :vsp %<.cpp<CR><C-w><C-r>
-au FileType cpp nnoremap <leader>h :vsp %<.h<CR>
+au FileType cpp nnoremap <buffer> <leader>c :vsp %<.cpp<CR><C-w><C-r>
+au FileType cpp nnoremap <buffer> <leader>h :vsp %<.h<CR>
 
 " clang-format
-au FileType cpp,cuda,glsl map <Leader>k :%pyf ~/.vim/clang-format.py<CR>
-au FileType cpp imap <C-K> <ESC>:pyf ~/.vim/clang-format.py<CR>i
-
-" javascript, html, css, scss
-au FileType javascript nnoremap <leader>k :call JsBeautify()<cr>
-au FileType html nnoremap <leader>k :call HtmlBeautify()<cr>
-au FileType css,scss nnoremap <leader>k :call CSSBeautify()<cr>
+"au FileType cpp,cuda,glsl map <Leader>k :%pyf ~/.vim/clang-format.py<CR>
+au FileType cpp imap <buffer> <C-K> <ESC>:pyf ~/.vim/clang-format.py<CR>i
 
 " typescript
-au FileType typescript nnoremap <leader>k :%!tsfmt --stdin<cr>
+au FileType typescript nnoremap <buffer> <leader>k :%!tsfmt --stdin<cr>
+
+" javascript, html, css, scss
+au FileType javascript nnoremap <buffer> <leader>k :call JsBeautify()<cr>
+au FileType html nnoremap <buffer> <leader>k :call HtmlBeautify()<cr>
+au FileType css,scss nnoremap <buffer> <leader>k :call CSSBeautify()<cr>
 
 au FileType cpp set iskeyword-=-
 
@@ -336,7 +336,7 @@ nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 let g:ycm_confirm_extra_conf = 0
 
 " Tern for vim
-au FileType javascript nnoremap <leader>jd :TernDef<CR>
+au FileType javascript nnoremap <buffer> <leader>jd :TernDef<CR>
 
 " Unimpaired
 nmap ü [
@@ -353,8 +353,8 @@ nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>u :GundoToggle<CR>
 
 " cosco.vim
-autocmd FileType javascript,css noremap <silent> <leader>, :call cosco#commaOrSemiColon()<CR>
-autocmd FileType javascript,css inoremap <silent> <leader>, <c-o>:call cosco#commaOrSemiColon()<CR>
+autocmd FileType javascript,css noremap <buffer> <silent> <leader>, :call cosco#commaOrSemiColon()<CR>
+autocmd FileType javascript,css inoremap <buffer> <silent> <leader>, <c-o>:call cosco#commaOrSemiColon()<CR>
 
 " Customizations like colortheme or key bindings
 if filereadable(expand("~/.vim/after.vimrc"))
