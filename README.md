@@ -53,7 +53,7 @@ npm install
 ```
 
 ### Git
-The `.gitconfig` file loads a `.gitconfig.user` file which must 
+The `.gitconfig` file loads a `~/.gitconfig.user` file which must 
 be created manually and should user specific settings like:
 ```
 [user]
@@ -61,6 +61,10 @@ be created manually and should user specific settings like:
   email = username@example.com
 [github]
   user = username
+```
+You can check this modification with
+```
+git config --global user.name
 ```
 
 ### Zsh
