@@ -70,3 +70,6 @@ git config --global user.name
 ### Zsh
 The zsh settings can be customized in the `.zshrc.user` file
 where further paths can be added to PATH.
+
+### Tmux
+If you wan't to install tmux run `install_tmux.sh`. This will additionally install ruby and the tmuxinator gem.
