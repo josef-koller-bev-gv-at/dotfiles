@@ -1,9 +1,10 @@
 #dotfiles
 ## Installation
-First download and install the `install_tools.sh` script:
+To download and install the dotfiles run the following command in your terminal:
 ```sh
 bash <(curl -s https://raw.githubusercontent.com/Christof/dotfiles/master/install_tools.sh)
 ```
+
 This installs:
 - git
 - zsh
@@ -11,6 +12,13 @@ This installs:
 - vim
 
 Afterwards it downloads the `dotfiles` repository and calls `install.sh` to create aliases to the config files.
+
+### Special Installation Instructions
+If there is no USERNAME variable set, run:
+```sh
+USERNAME=user123 bash <(curl -s https://raw.githubusercontent.com/Christof/dotfiles/master/install_tools.sh)
+```
+The zsh installer may tell you to reopen your terminal and `install_tools.sh` stops at this point. Check the `~/.installed` folder and rerun the script.
 
 ### Vim
 Get all vim plugins by executing (in vim):
