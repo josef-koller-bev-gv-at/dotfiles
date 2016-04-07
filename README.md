@@ -18,11 +18,16 @@ If there is no USERNAME variable set, run:
 ```sh
 USERNAME=user123 bash <(curl -s https://raw.githubusercontent.com/Christof/dotfiles/master/install_tools.sh)
 ```
-The zsh installer may tell you to reopen your terminal and `install_tools.sh` stops at this point. Check the `~/.installed` folder and rerun the script by the zsh. The command ...
+The zsh installer may tell you to reopen your terminal and `install_tools.sh` stops at this point. The command ...
 ```sh
 chsh -s /bin/zsh user123
 ```
-... changes the login shell for the user user123 to zsh. To finish this adjustment of the user configuration it is necessary to stop the current session and login again.
+... changes the login shell for the user user123 to zsh. To finish this adjustment of the user configuration it is necessary to stop the current session and login again. Remove or move your `~/.zshrc` file because it will be replaced by a symbolic link to the local clone of the dotfiles repository. Put your user specific configurations to `~/.zshrc.user` or run
+```
+cat .bashrc >> .zshrc.user
+```
+
+Check the `~/.installed` folder and rerun the installation script using the zsh. 
 
 ### Vim
 Get all vim plugins by executing (in vim):
