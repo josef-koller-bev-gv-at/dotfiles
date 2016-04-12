@@ -243,7 +243,7 @@ au FileType cpp nnoremap <buffer> <leader>c :vsp %<.cpp<CR><C-w><C-r>
 au FileType cpp nnoremap <buffer> <leader>h :vsp %<.h<CR>
 
 " clang-format
-"au FileType cpp,cuda,glsl map <Leader>k :%pyf ~/.vim/clang-format.py<CR>
+au FileType cpp,cuda,glsl nnoremap <buffer> <Leader>k :%pyf ~/.vim/clang-format.py<CR>
 au FileType cpp imap <buffer> <C-K> <ESC>:pyf ~/.vim/clang-format.py<CR>i
 
 " typescript
