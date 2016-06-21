@@ -247,7 +247,7 @@ au FileType cpp,cuda,glsl nnoremap <buffer> <Leader>k :%pyf ~/.vim/clang-format.
 au FileType cpp imap <buffer> <C-K> <ESC>:pyf ~/.vim/clang-format.py<CR>i
 
 " typescript
-au FileType typescript nnoremap <buffer> <leader>k :%!tsfmt --stdin<cr>
+au FileType typescript nnoremap <buffer> <leader>k :%!tsfmt %< --no-tsconfig --stdin<cr>
 
 " javascript, html, css, scss
 au FileType javascript nnoremap <buffer> <leader>k :call JsBeautify()<cr>
