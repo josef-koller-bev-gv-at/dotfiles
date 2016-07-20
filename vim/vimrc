@@ -263,6 +263,10 @@ au FileType sh autocmd BufWritePre <buffer> :%s/\s\+$//e
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 autocmd BufNewFile,BufReadPost *.hglsl set filetype=glsl
 
+" Run tests with mocha
+au FileType typescript nnoremap <buffer> <leader>t :execute '!NODE_ENV=test mocha' substitute(expand('%:p'), '\.ts', ".js", '')<CR>
+au FileType javascript nnoremap <buffer> <leader>t :execute '!NODE_ENV=test mocha' expand('%:p')<CR>
+
 " -----------------------------------------------------------
 " Plugin configuration
 " -----------------------------------------------------------
