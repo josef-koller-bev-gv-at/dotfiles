@@ -81,7 +81,7 @@ if [ -e $INSTALLED/dotfiles ];
 then
   echo "Dotfiles already installed."
 else
-  sudo apt-get install libclang-3.6-dev clang-format-3.6 -y
+  sudo apt-get install libclang-3.8-dev clang-format-3.8 -y
   cd $USER_SOURCES
   git clone https://github.com/Christof/dotfiles
   cd dotfiles
