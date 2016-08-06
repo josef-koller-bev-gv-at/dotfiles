@@ -21,7 +21,7 @@ mkdir $INSTALLED -p
 cd $USER_HOME
 
 #G++ build
-sudo apt-get install libc-dev-bin libc6 libc6:i386 libc6-dev libcurl3 libglademm-2.4-1c2a libgtkmm-2.4-1c2a cmake g++-4.8 build-essential glibc-doc glibc-doc valgrind locales python-dev -y
+sudo apt-get install libc-dev-bin libc6 libc6:i386 libc6-dev libcurl3 libglademm-2.4-1v5 libgtkmm-2.4-1v5 cmake g++ build-essential glibc-doc glibc-doc valgrind locales python-dev -y
 
 #GIT
 if [ -e $INSTALLED/git-2.9.2 ];
