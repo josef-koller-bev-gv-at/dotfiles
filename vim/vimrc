@@ -21,7 +21,7 @@ Plugin 'scrooloose/syntastic'
 " install guide: https://github.com/Valloric/YouCompleteMe
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
-Plugin 'git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex'
+Plugin 'lervag/vimtex'
 Plugin 'guns/vim-clojure-static'
 Plugin 'tpope/vim-fireplace'
 Plugin 'vim-scripts/paredit.vim'
@@ -270,10 +270,14 @@ au FileType javascript nnoremap <buffer> <leader>t :execute '!NODE_ENV=test moch
 " -----------------------------------------------------------
 " Plugin configuration
 " -----------------------------------------------------------
-" vim-latex
-let g:tex_flavor='latex'
-let g:Tex_DefaultTargetFormat='pdf'
-let g:Tex_CompileRule_pdf='pdflatex -shell-escape -interaction=nonstopmode $*'
+" vimtex
+let g:vimtex_view_use_temp_files=1
+let g:vimtex_view_method='zathura'
+let g:vimtex_quickfix_ignored_warnings = [
+    \ 'Underfull',
+    \ 'Overfull',
+    \ 'specifier changed to',
+  \ ]
 
 " commentary
 autocmd FileType cpp,cuda setlocal commentstring=//\ %s
@@ -341,6 +345,20 @@ let g:ycm_collect_identifiers_from_comments_and_strings = 1
 nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 " don't ask before using YCM
 let g:ycm_confirm_extra_conf = 0
+
+if !exists('g:ycm_semantic_triggers')
+  let g:ycm_semantic_triggers = {}
+endif
+let g:ycm_semantic_triggers.tex = [
+      \ 're!\\[A-Za-z]*cite[A-Za-z]*(\[[^]]*\]){0,2}{[^}]*',
+      \ 're!\\[A-Za-z]*ref({[^}]*|range{([^,{}]*(}{)?))',
+      \ 're!\\hyperref\[[^]]*',
+      \ 're!\\includegraphics\*?(\[[^]]*\]){0,2}{[^}]*',
+      \ 're!\\(include(only)?|input){[^}]*',
+      \ 're!\\\a*(gls|Gls|GLS)(pl)?\a*(\s*\[[^]]*\]){0,2}\s*\{[^}]*',
+      \ 're!\\includepdf(\s*\[[^]]*\])?\s*\{[^}]*',
+      \ 're!\\includestandalone(\s*\[[^]]*\])?\s*\{[^}]*',
+      \ ]
 
 " Tern for vim
 au FileType javascript nnoremap <buffer> <leader>jd :TernDef<CR>
