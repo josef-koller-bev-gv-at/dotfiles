@@ -236,7 +236,7 @@ autocmd BufWritePre * :call s:MkNonExDir(expand('<afile>'), +expand('<abuf>'))
 map <leader>k =G<CR>
 
 " format xml
-au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
+au FileType xml nnoremap <buffer> <leader>k :%!xmllint --format --recover -<cr>
 
 " c++
 au FileType cpp nnoremap <buffer> <leader>c :vsp %<.cpp<CR><C-w><C-r>
