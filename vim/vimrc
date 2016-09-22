@@ -278,6 +278,9 @@ let g:Tex_CompileRule_pdf='pdflatex -shell-escape -interaction=nonstopmode $*'
 " commentary
 autocmd FileType cpp,cuda setlocal commentstring=//\ %s
 
+"typescript-vim
+let g:typescript_indent_disable = 1
+
 " Syntastic
 let g:syntastic_cpp_compiler = 'g++'
 let g:syntastic_cpp_compiler_options = ' -std=c++11'
