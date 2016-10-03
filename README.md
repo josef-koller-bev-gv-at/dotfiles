@@ -11,9 +11,9 @@ This installs:
 - oh-my-zsh
 - vim
 
-Afterwards it downloads the `dotfiles` repository and calls `install.sh` to create aliases to the config files.
+Afterwards it downloads the `dotfiles` repository and calls `install.sh` to create aliases to the config files. Restart the system.
 
-### Special Installation Instructions
+### Special Installation Instructions for KDE
 If there is no USERNAME variable set, run:
 ```sh
 USERNAME=user123 bash <(curl -s https://raw.githubusercontent.com/Christof/dotfiles/master/install_tools.sh)
@@ -35,7 +35,7 @@ Get all vim plugins by executing (in vim):
 :PluginInstall
 ```
 
-To use powerline fonts, execute `install-powerline-fonts.sh` and
+To use powerline fonts, execute `~/Documents/sources/dotfiles/install-powerline-fonts.sh` and
 select a powerline font in the terminal preferences (for example
 `Droid Sans Mono for Powerline`).
 
@@ -45,7 +45,7 @@ There are two scripts to customize the settings:
  - `after.vimrc` to change user specific settings like the colorscheme
 
 
-For YouCompleteMe with C/C++ support run:
+For YouCompleteMe with C/C++ support run (install boost first):
 ```
 cd ~/.vundle/YouCompleteMe
 ./install.py --clang-completer --system-libclang --system-boost
