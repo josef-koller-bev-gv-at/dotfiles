@@ -14,7 +14,8 @@
   st = status
   co = checkout
   gpu = push -u origin HEAD
-  hist = log --pretty=format:\"%h %ad | %s %b%d [%an]\" --graph --date=short
+
+  hist = log --pretty=format:\"%Cred%h%Creset %Cgreen%ad%Creset | %s %b%C(yellow)%d%Creset %C(bold blue)[%an]%Creset\" --graph --date=short
   br = branch
   type = cat-file -t
   dump = cat-file -p
