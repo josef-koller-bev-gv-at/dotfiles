@@ -74,6 +74,23 @@ You can check this modification with
 git config user.name
 ```
 
+#### Gnome Keyring
+
+If you use Github's two factor authentication and want to store the personal access token in the gnome keyring,
+install it using the package manager:
+
+```bash
+sudo apt-get install libgnome-keyring-dev
+```
+
+Afterwards go into the git installation directory `~/Documents/sources/git-.../`. The execute the following commands:
+
+```bash
+cd contrib/credential/gnome-keyring
+sudo make
+sudo cp git-credential-gnome-keyring /usr/local/bin
+```
+
 ### Zsh
 The zsh settings can be customized in the `.zshrc.user` file
 where further paths can be added to PATH.
