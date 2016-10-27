@@ -12,6 +12,7 @@ This installs:
 - vim
 
 Afterwards it downloads the `dotfiles` repository and calls `install.sh` to create aliases to the config files. Restart the system.
+If password-error occurs then restart the system and rerun script. 
 
 ### Special Installation Instructions for KDE
 If there is no USERNAME variable set, run:
@@ -45,12 +46,13 @@ There are two scripts to customize the settings:
  - `after.vimrc` to change user specific settings like the colorscheme
 
 
-For YouCompleteMe with C/C++ support run (install boost first):
+For YouCompleteMe with C/C++ support run:
 ```
 cd ~/.vundle/YouCompleteMe
 ./install.py --clang-completer --system-libclang --system-boost
 ```
 
+(do later)
 For YouCompleteMe with JavaScript support run:
 ```
 cd ~/.vundle/tern_for_vim
@@ -69,7 +71,7 @@ be created manually and should user specific settings like:
 ```
 You can check this modification with
 ```
-git config --global user.name
+git config user.name
 ```
 
 ### Zsh
@@ -77,4 +79,7 @@ The zsh settings can be customized in the `.zshrc.user` file
 where further paths can be added to PATH.
 
 ### Tmux (Optional)
-If you wan't to install tmux run `install_tmux.sh`. This will additionally install ruby and the tmuxinator gem.
+```
+sudo apt-get install tmux tmuxinator 
+```
+via package manager
