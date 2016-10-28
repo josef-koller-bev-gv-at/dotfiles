@@ -82,6 +82,12 @@ then
   echo "Dotfiles already installed."
 else
   sudo apt-get install libclang-3.8-dev clang-format-3.8 -y
+  # Create symbolic link because the vim config expects a clang-format
+  if [ ! -f /usr/bin/clang-format ];
+  then
+    sudo ln -s /usr/bin/clang-format-3.8 /usr/bin/clang-format
+  fi
+
   cd $USER_SOURCES
   git clone https://github.com/Christof/dotfiles
   cd dotfiles
