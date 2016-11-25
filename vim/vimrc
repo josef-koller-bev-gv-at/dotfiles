@@ -154,6 +154,7 @@ nmap <leader>v :tabedit $MYVIMRC<CR>
 
 " Bind ack to <Leader>f
 nnoremap <Leader>f :Ack
+nnoremap <Leader>F y:Ack <C-r>=expand('<cword>')<CR>
 
 " map <C-]> to <Leader>g
 nnoremap <Leader>g <C-]>
