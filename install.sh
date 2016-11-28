@@ -1,8 +1,16 @@
-#!/bin/zsh
+#!/bin/bash
+
+cd "$(dirname "$0")"
 
 function create-alias() {
-if [ ! -f "$2" ]; then
+if [ ! -e "$2" ]; then
   ln -s $(pwd -P)/$(dirname "$0")/$1 $2
+else
+  read -r -e -p "File '$2' already exists. Would you like to overwrite it with a symbolic link? [y/n] "
+  echo
+  if [[ $REPLY =~ ^[Yy]$ ]]; then
+    ln -f -s $(pwd -P)/$(dirname "$0")/$1 $2
+  fi
 fi
 }
 
