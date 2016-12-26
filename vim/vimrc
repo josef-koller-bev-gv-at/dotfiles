@@ -275,7 +275,7 @@ au FileType javascript nnoremap <buffer> <leader>t :execute '!NODE_ENV=test moch
 " Plugin configuration
 " -----------------------------------------------------------
 " vimtex
-let g:vimtex_view_use_temp_files=1
+let g:vimtex_view_use_temp_files=0
 let g:vimtex_view_method='zathura'
 let g:vimtex_quickfix_ignored_warnings = [
     \ 'Underfull',
