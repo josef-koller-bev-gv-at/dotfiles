@@ -281,6 +281,8 @@ let g:vimtex_quickfix_ignored_warnings = [
     \ 'Underfull',
     \ 'Overfull',
     \ 'specifier changed to',
+    \ 'Package subfig Warning: Your document class has a bad definition',
+    \ 'Package hyperref Warning'
   \ ]
 
 " commentary
