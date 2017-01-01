@@ -271,6 +271,10 @@ autocmd BufNewFile,BufReadPost *.hglsl set filetype=glsl
 au FileType typescript nnoremap <buffer> <leader>t :execute '!NODE_ENV=test mocha' substitute(expand('%:p'), '\.ts', ".js", '')<CR>
 au FileType javascript nnoremap <buffer> <leader>t :execute '!NODE_ENV=test mocha' expand('%:p')<CR>
 
+" Latex
+au FileType tex setlocal spell
+au FileType tex call s:EnableWrap()
+
 " -----------------------------------------------------------
 " Plugin configuration
 " -----------------------------------------------------------
