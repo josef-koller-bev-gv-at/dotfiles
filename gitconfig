@@ -30,3 +30,9 @@
   required = true
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
+[pager]
+	diff = diff-highlight | less
+	show = diff-highlight | less
+	log = diff-highlight | less
+[interactive]
+	diffFilter = diff-highlight
