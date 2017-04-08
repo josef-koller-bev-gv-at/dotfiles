@@ -49,6 +49,10 @@ Plugin 'einars/js-beautify'
 Plugin 'tikhomirov/vim-glsl'
 Plugin 'christoomey/vim-tmux-navigator'
 
+Plugin 'eagletmt/ghcmod-vim'
+Plugin 'eagletmt/neco-ghc'
+Plugin 'itchyny/vim-haskell-indent'
+
 " Color themes
 Plugin 'https://github.com/vim-scripts/ScrollColors'
 Plugin 'altercation/vim-colors-solarized'
@@ -275,6 +279,13 @@ au FileType javascript nnoremap <buffer> <leader>t :execute '!NODE_ENV=test moch
 au FileType tex setlocal spell
 au FileType tex call s:EnableWrap()
 
+" Haskell
+autocmd BufWritePost *.hs GhcModCheckAndLintAsync
+" Disable haskell-vim omnifunc
+let g:haskellmode_completion_ghc = 0
+autocmd FileType haskell setlocal omnifunc=necoghc#omnifunc
+au FileType haskell nnoremap <buffer> <leader>k :%!hindent<cr>
+
 " -----------------------------------------------------------
 " Plugin configuration
 " -----------------------------------------------------------
@@ -319,6 +330,8 @@ let g:ctrlp_extensions = ['funky']
 " and <leader>c for cpp if they are in the same directory.
 nmap <Leader>fs :let g:ctrlp_default_input = expand('%:t:r') \|
     \ call ctrlp#init(0) \| unlet g:ctrlp_default_input<CR>
+
+let g:ycm_semantic_triggers = {'haskell' : ['.']}
 
 " CtrlPFunky
 let g:ctrlp_funky_syntax_highlight = 1
@@ -379,6 +392,15 @@ let g:ycm_semantic_triggers.tex = [
 
 " Tern for vim
 au FileType javascript nnoremap <buffer> <leader>jd :TernDef<CR>
+
+" Ghcmod
+map <silent> tw :GhcModTypeInsert<CR>
+map <silent> ts :GhcModSplitFunCase<CR>
+map <silent> tq :GhcModType<CR>
+map <silent> te :GhcModTypeClear<CR>
+
+" Necoghc
+let g:necoghc_enable_detailed_browse = 1
 
 " Unimpaired
 nmap ü [
