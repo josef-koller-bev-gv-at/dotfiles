@@ -54,10 +54,6 @@ alias sagi="sudo apt-get install"
 
 alias npmi="npm install --save-dev"
 
-# RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
 export TERM=xterm-256color
 
 # Customize to your needs... (like custom PATH)
