@@ -48,6 +48,7 @@ Plugin 'maksimr/vim-jsbeautify'
 Plugin 'einars/js-beautify'
 Plugin 'tikhomirov/vim-glsl'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'hauleth/sad.vim'
 
 Plugin 'eagletmt/ghcmod-vim'
 Plugin 'eagletmt/neco-ghc'
@@ -409,6 +410,12 @@ omap ü [
 omap + ]
 xmap ü [
 xmap + ]
+
+" SAD
+nmap e <Plug>(sad-change-forward)
+xmap e <Plug>(sad-change-forward)
+nmap E <Plug>(sad-change-backward)
+xmap E <Plug>(sad-change-backward)
 
 " fugitive
 nnoremap <leader>gs :Gstatus<CR>
