@@ -412,8 +412,10 @@ xmap ü [
 xmap + ]
 
 " SAD
-nmap <leader>s <Plug>(sad-change-forward)
-nmap <leader>S <Plug>(sad-change-backward)
+nmap e <Plug>(sad-change-forward)
+xmap e <Plug>(sad-change-forward)
+nmap E <Plug>(sad-change-backward)
+xmap E <Plug>(sad-change-backward)
 
 " fugitive
 nnoremap <leader>gs :Gstatus<CR>
