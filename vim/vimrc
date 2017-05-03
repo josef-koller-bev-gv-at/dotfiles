@@ -309,7 +309,7 @@ let g:typescript_indent_disable = 1
 
 "tsuquyomi
 let g:tsuquyomi_disable_default_mappings = 1
-nmap <Leader>r :TsuReferences
+nmap <Leader>re :TsuReferences<CR>
 
 " Syntastic
 let g:syntastic_cpp_compiler = 'g++'
