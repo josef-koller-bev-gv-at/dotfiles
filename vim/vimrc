@@ -393,6 +393,7 @@ let g:ycm_semantic_triggers.tex = [
       \ 're!\\includepdf(\s*\[[^]]*\])?\s*\{[^}]*',
       \ 're!\\includestandalone(\s*\[[^]]*\])?\s*\{[^}]*',
       \ ]
+let g:ycm_semantic_triggers.elm = ['.']
 
 " Tern for vim
 au FileType javascript nnoremap <buffer> <leader>jd :TernDef<CR>
