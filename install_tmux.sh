@@ -27,24 +27,22 @@ else
   touch $INSTALLED/ruby-2.2.1
 fi
 
-if [ -e $INSTALLED/tmux-2.1 ];
+if [ -e $INSTALLED/tmux-2.5 ];
 then
 	echo "TMUX already installed."
 else
   sudo apt-get install libevent-dev xclip -y
   cd $USER_SOURCES
-  wget https://github.com/tmux/tmux/releases/download/2.1/tmux-2.1.tar.gz
-  tar -xvf tmux-2.1.tar.gz
+  wget https://launchpadlibrarian.net/331426216/libevent-2.1-6_2.1.8-stable-4_amd64.deb
+  sudo apt install ./libevent-2.1-6_2.1.8-stable-4_amd64.deb -y
 
-  cd tmux-*
-  ./configure
-  make -j 12
-  sudo make install
+  wget https://launchpadlibrarian.net/331297336/tmux_2.5-3build1_amd64.deb
+  sudo apt install ./tmux_2.5-3build1_amd64.deb
 
   gem install --user-install tmuxinator
   echo "Ensure that gem bin ('~/.gem/ruby/2.2.1/bin') is in the path"
 
   echo "installed TMUX successfully."
-  touch $INSTALLED/tmux-2.1
+  touch $INSTALLED/tmux-2.5
 fi
 
