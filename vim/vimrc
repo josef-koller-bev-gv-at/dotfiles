@@ -63,6 +63,7 @@ Plugin 'ratazzi/blackboard.vim'
 Plugin 'sjl/badwolf'
 Plugin 'Lokaltog/vim-distinguished'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'lifepillar/vim-solarized8'
 
 call vundle#end()
 "
@@ -85,6 +86,7 @@ filetype plugin indent on     " required!
 syntax on
 
 set t_Co=256
+set termguicolors
 set hidden
 
 " Increase command history capacity
