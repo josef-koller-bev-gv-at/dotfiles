@@ -85,6 +85,7 @@ filetype plugin indent on     " required!
 syntax on
 
 set t_Co=256
+set termguicolors
 set hidden
 
 " Increase command history capacity
