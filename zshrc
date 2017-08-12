@@ -57,6 +57,8 @@ alias sagi="sudo apt-get install"
 
 alias npmi="npm install --save-dev"
 
+export TERM=xterm-256color
+
 # Customize to your needs... (like custom PATH)
 source ~/.zshrc.user
 
