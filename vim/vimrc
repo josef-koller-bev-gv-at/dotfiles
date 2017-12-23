@@ -429,6 +429,10 @@ nnoremap <leader>u :GundoToggle<CR>
 autocmd FileType javascript,css noremap <buffer> <silent> <leader>, :call cosco#commaOrSemiColon()<CR>
 autocmd FileType javascript,css inoremap <buffer> <silent> <leader>, <c-o>:call cosco#commaOrSemiColon()<CR>
 
+" elm.vim
+let g:elm_detailed_complete = 1
+let g:elm_syntastic_show_warnings = 1
+
 " Customizations like colortheme or key bindings
 if filereadable(expand("~/.vim/after.vimrc"))
   source ~/.vim/after.vimrc
