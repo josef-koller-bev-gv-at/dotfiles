@@ -1,0 +1,13 @@
+Vans.haskero
+arcticicestudio.nord-visual-studio-code
+avli.clojure
+eg2.tslint
+esbenp.prettier-vscode
+hoovercj.haskell-linter
+jamesnorton.continuum
+jcanero.hoogle-vscode
+justusadam.language-haskell
+kisstkondoros.vscode-codemetrics
+rbbit.typescript-hero
+sbrink.elm
+vscodevim.vim
