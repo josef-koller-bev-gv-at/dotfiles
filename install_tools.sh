@@ -51,14 +51,16 @@ if [ -e $INSTALLED/git-lfs-2.3.4 ];
 then
   echo "GIT already installed."
 else
-  if [ -e $INSTALLED/git-lfs-1.4.4];
+  if [ -e $INSTALLED/git-lfs-1.4.4 ];
   then
-    rm /usr/local/bin/git-lfs
+    sudo rm -f /usr/local/bin/git-lfs
     rm $INSTALLED/git-lfs-1.4.4
   fi
 
   #load source and install
   curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+
+  sudo apt-get install git-lfs -y
 
   git lfs install
 
