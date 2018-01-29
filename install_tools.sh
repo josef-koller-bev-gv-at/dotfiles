@@ -47,22 +47,25 @@ else
 fi
 
 #GIT-LFS
-if [ -e $INSTALLED/git-lfs-1.4.4 ];
+if [ -e $INSTALLED/git-lfs-2.3.4 ];
 then
   echo "GIT already installed."
 else
-  #load source and install
-  cd $USER_SOURCES
-  gitlfs_file="gitlfs.tar.gz"
-  wget -O $gitlfs_file https://github.com/github/git-lfs/releases/download/v1.4.4/git-lfs-linux-amd64-1.4.4.tar.gz
-  tar -xf $gitlfs_file
-  cd git-lfs*
-  sudo ./install.sh
+  if [ -e $INSTALLED/git-lfs-1.4.4 ];
+  then
+    sudo rm -f /usr/local/bin/git-lfs
+    rm $INSTALLED/git-lfs-1.4.4
+  fi
 
-  rm $USER_SOURCES/$gitlfs_file
+  #load source and install
+  curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo -E bash
+
+  sudo apt-get install git-lfs -y
+
+  git lfs install
 
   echo "installed GIT-LFS successfully"
-  touch $INSTALLED/git-lfs-1.4.4
+  touch $INSTALLED/git-lfs-2.3.4
 fi
 
 #ZSH
