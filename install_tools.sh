@@ -77,6 +77,7 @@ else
   chsh -s /bin/zsh $USER_NAME
   sudo apt-get install curl -y
   curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+  git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 
   echo "installed ZSH successfully"
   touch $INSTALLED/oh-my-zsh
