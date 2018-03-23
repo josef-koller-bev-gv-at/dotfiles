@@ -19,7 +19,7 @@ Plugin 'Shougo/vimproc.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'scrooloose/syntastic'
+Plugin 'w0rp/ale'
 Plugin 'Quramy/tsuquyomi'
 " install guide: https://github.com/Valloric/YouCompleteMe
 Plugin 'Valloric/YouCompleteMe'
@@ -64,6 +64,7 @@ Plugin 'sjl/badwolf'
 Plugin 'Lokaltog/vim-distinguished'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'lifepillar/vim-solarized8'
+Plugin 'ElmCast/elm-vim'
 
 call vundle#end()
 "
@@ -392,6 +393,7 @@ let g:ycm_semantic_triggers.tex = [
       \ 're!\\includepdf(\s*\[[^]]*\])?\s*\{[^}]*',
       \ 're!\\includestandalone(\s*\[[^]]*\])?\s*\{[^}]*',
       \ ]
+let g:ycm_semantic_triggers.elm = ['.']
 
 " Tern for vim
 au FileType javascript nnoremap <buffer> <leader>jd :TernDef<CR>
