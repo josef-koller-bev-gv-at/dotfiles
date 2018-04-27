@@ -24,7 +24,7 @@ cd $USER_HOME
 sudo apt-get install libc-dev-bin libc6 libc6:i386 libc6-dev libcurl3 libglademm-2.4-1v5 libgtkmm-2.4-1v5 cmake g++ build-essential glibc-doc glibc-doc valgrind locales python-dev libboost-all-dev -y
 
 #GIT
-if [ -e $INSTALLED/git-2.10.0 ];
+if [ -e $INSTALLED/git-2.16.2 ];
 then
   echo "GIT already installed."
 else
@@ -33,9 +33,9 @@ else
 
   #load source and install
   cd $USER_SOURCES
-  wget https://github.com/git/git/archive/v2.10.0.tar.gz
-  tar -xf v2.10.0.tar.gz
-  cd git-2.10.0
+  wget https://github.com/git/git/archive/v2.16.2.tar.gz
+  tar -xf v2.16.2.tar.gz
+  cd git-2.16.2
   make configure
   ./configure
   make
@@ -43,7 +43,7 @@ else
   sudo cp contrib/diff-highlight/diff-highlight /usr/local/bin
 
   echo "installed GIT successfully"
-  touch $INSTALLED/git-2.10.0
+  touch $INSTALLED/git-2.16.2
 fi
 
 #GIT-LFS
@@ -77,6 +77,7 @@ else
   chsh -s /bin/zsh $USER_NAME
   sudo apt-get install curl -y
   curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+  git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 
   echo "installed ZSH successfully"
   touch $INSTALLED/oh-my-zsh
