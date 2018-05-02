@@ -49,6 +49,7 @@ Plugin 'einars/js-beautify'
 Plugin 'tikhomirov/vim-glsl'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'hauleth/sad.vim'
+Plugin 'prettier/vim-prettier'
 
 Plugin 'eagletmt/ghcmod-vim'
 Plugin 'eagletmt/neco-ghc'
@@ -259,10 +260,10 @@ au FileType cpp,cuda,glsl nnoremap <buffer> <Leader>k :%pyf ~/.vim/clang-format.
 au FileType cpp imap <buffer> <C-K> <ESC>:pyf ~/.vim/clang-format.py<CR>i
 
 " typescript
-au FileType typescript nnoremap <buffer> <leader>k :%!tsfmt %< --no-tsconfig --stdin<cr>
+au FileType typescript nnoremap <buffer> <leader>k :PrettierAsync<cr>
 
 " javascript, html, css, scss
-au FileType javascript nnoremap <buffer> <leader>k :call JsBeautify()<cr>
+au FileType javascript nnoremap <buffer> <leader>k :PrettierAsync<cr>
 au FileType html nnoremap <buffer> <leader>k :call HtmlBeautify()<cr>
 au FileType css,scss nnoremap <buffer> <leader>k :call CSSBeautify()<cr>
 
@@ -439,6 +440,12 @@ let g:elm_syntastic_show_warnings = 1
 if filereadable(expand("~/.vim/after.vimrc"))
   source ~/.vim/after.vimrc
 endif
+
+" vim-prettier
+let g:prettier#config#single_quote = 'true'
+let g:prettier#config#trailing_comma = 'es5'
+let g:prettier#config#bracket_spacing = 'true'
+let g:prettier#config#parser = 'typescript'
 
 " Source this file when it's saved
 if has("autocmd")
