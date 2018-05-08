@@ -24,7 +24,7 @@ cd $USER_HOME
 sudo apt-get install libc-dev-bin libc6 libc6:i386 libc6-dev libcurl3 libglademm-2.4-1v5 libgtkmm-2.4-1v5 cmake g++ build-essential glibc-doc glibc-doc valgrind locales python-dev libboost-all-dev -y
 
 #GIT
-if [ -e $INSTALLED/git-2.16.2 ];
+if [ -e $INSTALLED/git-2.17.0 ];
 then
   echo "GIT already installed."
 else
@@ -33,17 +33,17 @@ else
 
   #load source and install
   cd $USER_SOURCES
-  wget https://github.com/git/git/archive/v2.16.2.tar.gz
-  tar -xf v2.16.2.tar.gz
-  cd git-2.16.2
+  wget https://github.com/git/git/archive/v2.17.0.tar.gz
+  tar -xf v2.17.0.tar.gz
+  cd git-2.17.0
   make configure
   ./configure
   make
   sudo make install
-  sudo cp contrib/diff-highlight/diff-highlight /usr/local/bin
+  sudo cp -r contrib/diff-highlight /usr/local/bin
 
   echo "installed GIT successfully"
-  touch $INSTALLED/git-2.16.2
+  touch $INSTALLED/git-2.17.0
 fi
 
 #GIT-LFS
