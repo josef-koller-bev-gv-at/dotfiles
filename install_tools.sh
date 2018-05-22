@@ -40,7 +40,10 @@ else
   ./configure
   make
   sudo make install
-  sudo cp -r contrib/diff-highlight /usr/local/bin
+  cd contrib/diff-highlight
+  make
+  sudo cp diff-highlight /usr/local/bin
+  sudo chmod +x /usr/local/bin/diff-highlight
 
   echo "installed GIT successfully"
   touch $INSTALLED/git-2.17.0
