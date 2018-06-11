@@ -10,23 +10,6 @@ INSTALLED=$USER_HOME/.installed
 
 cd $USER_HOME
 
-if [ -e $INSTALLED/ruby-2.2.1 ];
-then
-  echo "Ruby already installed."
-else
-  cd $USER_SOURCES
-
-  wget -O ruby-install-0.6.0.tar.gz https://github.com/postmodern/ruby-install/archive/v0.6.0.tar.gz
-  tar -xzvf ruby-install-0.6.0.tar.gz
-  cd ruby-install-0.6.0/
-  sudo make install
-
-  sudo -E ruby-install -i /usr/local/ ruby 2.2.1
-
-  echo "installed Ruby successfully."
-  touch $INSTALLED/ruby-2.2.1
-fi
-
 if [ -e $INSTALLED/tmux-2.7 ];
 then
 	echo "TMUX already installed."
