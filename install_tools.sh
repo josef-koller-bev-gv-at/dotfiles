@@ -50,7 +50,7 @@ else
 fi
 
 #GIT-LFS
-if [ -e $INSTALLED/git-lfs-2.3.4 ];
+if [ -e $INSTALLED/git-lfs-package ];
 then
   echo "GIT already installed."
 else
@@ -68,7 +68,7 @@ else
   git lfs install
 
   echo "installed GIT-LFS successfully"
-  touch $INSTALLED/git-lfs-2.3.4
+  touch $INSTALLED/git-lfs-package
 fi
 
 #ZSH
