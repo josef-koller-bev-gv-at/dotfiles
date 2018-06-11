@@ -26,8 +26,8 @@ else
 
   sudo make install
 
-  #gem install --user-install tmuxinator
-  #echo "Ensure that gem bin ('~/.gem/ruby/2.2.1/bin') is in the path"
+  gem install --user-install tmuxinator
+  echo "Ensure that gem bin ('~/.gem/ruby/2.3.1/bin') is in the path"
 
   echo "installed TMUX successfully."
   touch $INSTALLED/tmux-2.7
