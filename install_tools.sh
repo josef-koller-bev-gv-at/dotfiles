@@ -21,7 +21,7 @@ mkdir $INSTALLED -p
 cd $USER_HOME
 
 #G++ build
-sudo apt-get install libc-dev-bin libc6 libc6:i386 libc6-dev libcurl3 libglademm-2.4-1v5 libgtkmm-2.4-1v5 cmake g++ build-essential glibc-doc glibc-doc valgrind locales python-dev libboost-all-dev -y
+sudo apt-get install libc-dev-bin libc6 libc6:i386 libc6-dev libcurl3 libglademm-2.4-1v5 libgtkmm-2.4-1v5 cmake g++ build-essential glibc-doc glibc-doc valgrind locales python-dev libboost-all-dev curl -y
 
 #GIT
 if [ -e $INSTALLED/git-2.17.0 ];
@@ -77,10 +77,6 @@ then
   echo "ZSH already installed."
 else
   sudo apt-get install zsh -y
-  chsh -s /bin/zsh $USER_NAME
-  sudo apt-get install curl -y
-  curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
-  git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 
   echo "installed ZSH successfully"
   touch $INSTALLED/oh-my-zsh
