@@ -3,7 +3,7 @@
 #Terminate on error
 set -e
 
-USER_NAME=$USERNAME
+USER_NAME=$(whoami)
 USER_HOME=/home/$USER_NAME
 USER_SOURCES=$USER_HOME/Documents/sources
 INSTALLED=$USER_HOME/.installed
