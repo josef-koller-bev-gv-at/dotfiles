@@ -77,6 +77,7 @@ then
   echo "ZSH already installed."
 else
   sudo apt-get install zsh -y
+  chsh -s /bin/zsh $USER_NAME
 
   echo "installed ZSH successfully"
   touch $INSTALLED/zsh
