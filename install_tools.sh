@@ -72,14 +72,14 @@ else
 fi
 
 #ZSH
-if [ -e $INSTALLED/oh-my-zsh ];
+if [ -e $INSTALLED/zsh ];
 then
   echo "ZSH already installed."
 else
   sudo apt-get install zsh -y
 
   echo "installed ZSH successfully"
-  touch $INSTALLED/oh-my-zsh
+  touch $INSTALLED/zsh
 fi
 
 #VIM
