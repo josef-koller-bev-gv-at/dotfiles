@@ -71,18 +71,6 @@ else
   touch $INSTALLED/git-lfs-package
 fi
 
-#ZSH
-if [ -e $INSTALLED/zsh ];
-then
-  echo "ZSH already installed."
-else
-  sudo apt-get install zsh -y
-  chsh -s /bin/zsh $USER_NAME
-
-  echo "installed ZSH successfully"
-  touch $INSTALLED/zsh
-fi
-
 #VIM
 if [ -e $INSTALLED/vim ];
 then
@@ -98,6 +86,31 @@ else
 
   echo "installed VIM successfully"
   touch $INSTALLED/vim
+fi
+
+#ZSH
+if [ -e $INSTALLED/zsh ];
+then
+  echo "ZSH already installed."
+else
+  sudo apt-get install zsh -y
+  chsh -s /bin/zsh $USER_NAME
+
+  echo "installed ZSH successfully"
+  touch $INSTALLED/zsh
+fi
+
+#oh-my-zsh
+if [ -e $INSTALLED/oh-my-zsh ];
+then
+  echo "oh-my-zsh already installed."
+else
+  curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+  source ~/.oh-my-zsh/oh-my-zsh.sh
+  git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+
+  echo "installed ZSH successfully"
+  touch $INSTALLED/oh-my-zsh
 fi
 
 #Dotfiles
