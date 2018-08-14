@@ -1,0 +1,32 @@
+{
+  "window.zoomLevel": 0,
+  "workbench.colorTheme": "Solarized Light",
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false,
+    "suppressResultsExplorerNotice": false,
+    "suppressShowKeyBindingsNotice": true,
+    "suppressUpdateNotice": false,
+    "suppressWelcomeNotice": true
+  },
+  "gitlens.keymap": "chorded",
+  "prettier.singleQuote": true,
+  "prettier.stylelintIntegration": true,
+  "vim.leader": "ö",
+  "vim.handleKeys": {
+    "<C-d>": true,
+    "<C-w>": false,
+    "<C-k>": false,
+    "<C-b>": false,
+    "<C-/>": false,
+    "<C-*>": false,
+    "<C-+>": false
+  },
+  "gitlens.historyExplorer.enabled": true,
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "breadcrumbs.enabled": true
+}
