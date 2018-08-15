@@ -1,4 +1,5 @@
 {
+  "editor.tabSize": 2,
   "window.zoomLevel": 0,
   "workbench.colorTheme": "Solarized Light",
   "gitlens.advanced.messages": {
@@ -24,9 +25,30 @@
     "<C-b>": false,
     "<C-/>": false,
     "<C-*>": false,
-    "<C-+>": false
+    "<C-+>": false,
+    "<C-f>": false,
+    "<C-y>": false,
+    "<C-J>": false
   },
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["leader", "d"],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.addSelectionToNextFindMatch",
+          "args": []
+        }
+      ]
+    }
+  ],
   "gitlens.historyExplorer.enabled": true,
   "workbench.editor.enablePreviewFromQuickOpen": false,
-  "breadcrumbs.enabled": true
+  "breadcrumbs.enabled": true,
+  "elm.makeCommand": "elm-make",
+  "editor.formatOnSave": true,
+  "codemetrics.basics.DecorationModeEnabled": false,
+  "explorer.confirmDelete": false,
+  "editor.renderWhitespace": "all",
+  "typescript.updateImportsOnFileMove.enabled": "always"
 }
