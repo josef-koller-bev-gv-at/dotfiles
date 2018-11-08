@@ -24,8 +24,11 @@ cd $USER_HOME
 sudo apt-get install libc-dev-bin libc6 libc6:i386 libc6-dev libcurl3 libglademm-2.4-1v5 libgtkmm-2.4-1v5 cmake g++ build-essential glibc-doc glibc-doc valgrind locales python-dev libboost-all-dev curl -y
 
 #GIT
-if [ -e $INSTALLED/git-2.17.0 ];
-then
+
+readonly GIT_VERSION="2.19.1"
+readonly git_contrib_dir=$(readlink -f $USER_SOURCES/git-$GIT_VERSION/contrib)
+
+if [ -e $INSTALLED/git-$GIT_VERSION ]; then
   echo "GIT already installed."
 else
   #Prerequisites
@@ -33,20 +36,37 @@ else
 
   #load source and install
   cd $USER_SOURCES
-  wget https://github.com/git/git/archive/v2.17.0.tar.gz
-  tar -xf v2.17.0.tar.gz
-  cd git-2.17.0
+  wget https://github.com/git/git/archive/v$GIT_VERSION.tar.gz
+  tar -xf v$GIT_VERSION.tar.gz
+  cd git-$GIT_VERSION
   make configure
   ./configure
   make
   sudo make install
-  cd contrib/diff-highlight
-  make
-  sudo cp diff-highlight /usr/local/bin
-  sudo chmod +x /usr/local/bin/diff-highlight
+
+  function install_git_bin() {
+    local git_binary_dir=$git_contrib_dir/$1
+    local git_binary_path=$git_binary_dir/$2
+    rm -f $git_binary_path
+    make -C $git_binary_dir
+    sudo cp $git_binary_path /usr/local/bin
+  }
+
+  function install_git_contrib() {
+    install_git_bin $1 $1
+  }
+
+
+  function install_git_credential() {
+    install_git_bin "credential/$1" "git-credential-$1"
+  }
+
+  install_git_contrib diff-highlight
+  install_git_credential gnome-keyring
+  install_git_credential libsecret
 
   echo "installed GIT successfully"
-  touch $INSTALLED/git-2.17.0
+  touch $INSTALLED/git-$GIT_VERSION
 fi
 
 #GIT-LFS
