@@ -97,7 +97,8 @@ The zsh settings can be customized in the `.zshrc.user` file
 where further paths can be added to PATH.
 
 ### Tmux (Optional)
+
+Use `install_tmux.sh` script or the package manager, if it contains the same or a newer version:
 ```
 sudo apt-get install tmux tmuxinator 
 ```
-via package manager
