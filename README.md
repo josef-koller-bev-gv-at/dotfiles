@@ -1,4 +1,5 @@
-#dotfiles
+# dotfiles
+
 ## Installation
 To download and install the dotfiles run the following command in your terminal:
 ```sh
