@@ -8,19 +8,21 @@ USER_HOME=/home/$USER_NAME
 USER_SOURCES=$USER_HOME/Documents/sources
 INSTALLED=$USER_HOME/.installed
 
+readonly TMUX_VERSION="2.8"
+
 cd $USER_HOME
 
-if [ -e $INSTALLED/tmux-2.7 ];
+if [ -e $INSTALLED/tmux-$TMUX_VERSION ];
 then
 	echo "TMUX already installed."
 else
   sudo apt-get install libevent-dev libncurses5-dev xclip automake build-essential pkg-config -y
   cd $USER_SOURCES
 
-  wget -O tmux-2.7.tar.gz https://github.com/tmux/tmux/releases/download/2.7/tmux-2.7.tar.gz
-  tar -xzvf tmux-2.7.tar.gz
+  wget -O tmux-$TMUX_VERSION.tar.gz https://github.com/tmux/tmux/releases/download/$TMUX_VERSION/tmux-$TMUX_VERSION.tar.gz
+  tar -xzvf tmux-$TMUX_VERSION.tar.gz
 
-  cd tmux-2.7
+  cd tmux-$TMUX_VERSION
 
   ./configure && make
 
@@ -30,6 +32,5 @@ else
   echo "Ensure that gem bin ('~/.gem/ruby/2.3.1/bin') is in the path"
 
   echo "installed TMUX successfully."
-  touch $INSTALLED/tmux-2.7
+  touch $INSTALLED/tmux-$TMUX_VERSION
 fi
-
