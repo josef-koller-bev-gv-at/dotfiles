@@ -32,7 +32,7 @@ if [ -e $INSTALLED/git-$GIT_VERSION ]; then
   echo "GIT already installed."
 else
   #Prerequisites
-  sudo apt-get install libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev autoconf -y
+  sudo apt-get install libcurl4-gnutls-dev libexpat1-dev gettext libz-dev libssl-dev autoconf libsecret-1-dev -y
 
   #load source and install
   cd $USER_SOURCES
