@@ -59,6 +59,8 @@ alias sagi="sudo apt-get install"
 
 alias npmi="npm install --save-dev"
 
+alias mux="tmuxinator"
+
 export TERM=xterm-256color
 
 # Customize to your needs... (like custom PATH)
