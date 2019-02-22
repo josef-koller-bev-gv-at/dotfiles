@@ -1,0 +1,19 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+  {
+    "key": "ctrl+w h",
+    "command": "workbench.action.focusLeftGroup"
+  },
+  {
+    "key": "ctrl+w l",
+    "command": "workbench.action.focusRightGroup"
+  },
+  {
+    "key": "shift+k",
+    "command": "workbench.action.nextEditor"
+  },
+  {
+    "key": "shift+j",
+    "command": "workbench.action.previousEditor"
+  },
+]
