@@ -39,8 +39,14 @@
     "command": "workbench.action.terminal.focusPrevious"
   },
   {
-    "key": "ctrl+space t",
-    "command": "workbench.action.terminal.toggleTerminal"
+    "key": "ctrl+[Backslash]",
+    "command": "workbench.action.terminal.focus",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+[Backslash]",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "terminalFocus"
   },
   {
     "key": "ctrl+space c",
@@ -61,5 +67,5 @@
   {
     "key": "shift+j",
     "command": "workbench.action.previousEditor"
-  },
+  }
 ]
