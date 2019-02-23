@@ -39,11 +39,11 @@
     "command": "workbench.action.terminal.focusPrevious"
   },
   {
-    "key": "ctrl+t t",
+    "key": "ctrl+space t",
     "command": "workbench.action.terminal.toggleTerminal"
   },
   {
-    "key": "ctrl+t c",
+    "key": "ctrl+space c",
     "command": "workbench.action.quickOpenTerm"
   },
   {
