@@ -1,6 +1,10 @@
 // Place your key bindings in this file to overwrite the defaults
 [
   {
+    "key": "ctrl+t t",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
     "key": "ctrl+t c",
     "command": "workbench.action.quickOpenTerm"
   },
