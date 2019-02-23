@@ -1,6 +1,10 @@
 // Place your key bindings in this file to overwrite the defaults
 [
   {
+    "key": "ctrl+t c",
+    "command": "workbench.action.quickOpenTerm"
+  },
+  {
     "key": "ctrl+w h",
     "command": "workbench.action.focusLeftGroup"
   },
