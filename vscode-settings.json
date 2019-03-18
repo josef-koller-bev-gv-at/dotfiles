@@ -40,6 +40,18 @@
           "args": []
         }
       ]
+    },
+    {
+      "before": ["K"],
+      "commands": [
+        "workbench.action.nextEditor"
+      ]
+    },
+    {
+      "before": ["J"],
+      "commands": [
+        "workbench.action.previousEditor"
+      ]
     }
   ],
   "gitlens.historyExplorer.enabled": true,

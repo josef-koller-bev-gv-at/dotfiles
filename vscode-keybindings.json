@@ -59,13 +59,5 @@
   {
     "key": "ctrl+w l",
     "command": "workbench.action.focusRightGroup"
-  },
-  {
-    "key": "shift+k",
-    "command": "workbench.action.nextEditor"
-  },
-  {
-    "key": "shift+j",
-    "command": "workbench.action.previousEditor"
   }
 ]
