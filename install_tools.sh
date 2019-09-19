@@ -153,3 +153,17 @@ else
   echo "installed Dotfiles successfully."
   touch $INSTALLED/dotfiles
 fi
+
+#vcpkg
+if [ -e $USER_HOME/Documents/vcpkg ];
+then
+  echo "Vcpkg already installed."
+else
+  cd $USER_HOME/Documents
+  git clone https://github.com/Microsoft/vcpkg.git
+  cd vcpkg
+  ./bootstrap-vcpkg.sh
+  ./vcpkg integrate install
+
+  echo "installed vcpkg successfully."
+fi
