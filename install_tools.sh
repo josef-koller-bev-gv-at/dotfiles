@@ -155,15 +155,12 @@ else
 fi
 
 #vcpkg
-if [ -e $USER_HOME/Documents/vcpkg ];
-then
-  echo "Vcpkg already installed."
-else
-  cd $USER_HOME/Documents
-  git clone https://github.com/Microsoft/vcpkg.git
-  cd vcpkg
-  ./bootstrap-vcpkg.sh
-  ./vcpkg integrate install
+cd $USER_HOME/Documents/dotfiles
+while true; do
+  read -p "Do you want to install vcpkg?[y/n]" yn
+  case $yn in
+    [Yy]* ) ./install_vcpkg.sh; break;;
+    [Nn]* ) exit;;
+  esac
+done
 
-  echo "installed vcpkg successfully."
-fi
