@@ -154,13 +154,23 @@ else
   touch $INSTALLED/dotfiles
 fi
 
-#vcpkg
-cd $USER_HOME/Documents/dotfiles
-while true; do
-  read -p "Do you want to install vcpkg?[y/n]" yn
-  case $yn in
-    [Yy]* ) ./install_vcpkg.sh; break;;
-    [Nn]* ) exit;;
-  esac
-done
+#VCPKG
+USER_DOCUMENTS=/home/$USER/Documents
+
+if [ -e $USER_DOCUMENTS/vcpkg ];
+then
+  echo "Vcpkg already installed."
+else
+  cd $USER_DOCUMENTS
+
+  while true; do
+    read -p "Do you want to install vcpkg?[y/n]" yn
+    case $yn in
+      [Yy]* ) ./dotfiles/install_vcpkg.sh; break;;
+      [Nn]* ) exit;;
+    esac
+  done
+
+  echo "installed vcpkg successfully."
+fi
 
