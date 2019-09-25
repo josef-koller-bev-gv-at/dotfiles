@@ -155,13 +155,13 @@ else
 fi
 
 #VCPKG
-USER_DOCUMENTS=/home/$USER/Documents
+USER_SOURCES=/home/$USER/Documents/sources
 
-if [ -e $USER_DOCUMENTS/vcpkg ];
+if [ -e $USER_SOURCES/vcpkg ];
 then
   echo "Vcpkg already installed."
 else
-  cd $USER_DOCUMENTS
+  cd $USER_SOURCES
 
   while true; do
     read -p "Do you want to install vcpkg?[y/n]" yn
