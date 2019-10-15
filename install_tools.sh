@@ -153,3 +153,24 @@ else
   echo "installed Dotfiles successfully."
   touch $INSTALLED/dotfiles
 fi
+
+#VCPKG
+USER_SOURCES=/home/$USER/Documents/sources
+
+if [ -e $USER_SOURCES/vcpkg ];
+then
+  echo "Vcpkg already installed."
+else
+  cd $USER_SOURCES
+
+  while true; do
+    read -p "Do you want to install vcpkg?[y/n]" yn
+    case $yn in
+      [Yy]* ) ./dotfiles/install_vcpkg.sh; break;;
+      [Nn]* ) exit;;
+    esac
+  done
+
+  echo "installed vcpkg successfully."
+fi
+
