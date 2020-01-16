@@ -31,14 +31,6 @@
     "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
   },
   {
-    "key": "ctrl+space n",
-    "command": "workbench.action.terminal.focusNext"
-  },
-  {
-    "key": "ctrl+space p",
-    "command": "workbench.action.terminal.focusPrevious"
-  },
-  {
     "key": "ctrl+[Backslash]",
     "command": "workbench.action.terminal.focus",
     "when": "!terminalFocus"
@@ -47,10 +39,6 @@
     "key": "ctrl+[Backslash]",
     "command": "workbench.action.focusActiveEditorGroup",
     "when": "terminalFocus"
-  },
-  {
-    "key": "ctrl+space c",
-    "command": "workbench.action.quickOpenTerm"
   },
   {
     "key": "ctrl+w h",
