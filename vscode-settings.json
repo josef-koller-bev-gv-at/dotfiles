@@ -1,7 +1,7 @@
 {
   "editor.tabSize": 2,
   "window.zoomLevel": 0,
-  "workbench.colorTheme": "Solarized Light",
+  "workbench.colorTheme": "Monokai Dimmed",
   "gitlens.advanced.messages": {
     "suppressCommitHasNoPreviousCommitWarning": false,
     "suppressCommitNotFoundWarning": false,
@@ -16,7 +16,6 @@
   },
   "gitlens.keymap": "chorded",
   "prettier.singleQuote": true,
-  "prettier.stylelintIntegration": true,
   "vim.leader": "ö",
   "vim.handleKeys": {
     "<C-d>": true,
@@ -40,6 +39,18 @@
           "args": []
         }
       ]
+    },
+    {
+      "before": ["K"],
+      "commands": [
+        "workbench.action.nextEditor"
+      ]
+    },
+    {
+      "before": ["J"],
+      "commands": [
+        "workbench.action.previousEditor"
+      ]
     }
   ],
   "gitlens.historyExplorer.enabled": true,
@@ -50,5 +61,12 @@
   "codemetrics.basics.DecorationModeEnabled": false,
   "explorer.confirmDelete": false,
   "editor.renderWhitespace": "all",
-  "typescript.updateImportsOnFileMove.enabled": "always"
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "window.titleBarStyle": "custom",
+  "gitlens.views.fileHistory.enabled": true,
+  "gitlens.views.lineHistory.enabled": true,
+  "editor.fontSize": 15,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

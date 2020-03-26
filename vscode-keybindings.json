@@ -1,0 +1,51 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+  {
+    "key": "tab",
+    "command": "selectNextQuickFix",
+    "when": "editorFocus && quickFixWidgetVisible"
+  },
+  {
+    "key": "shift+tab",
+    "command": "selectPrevQuickFix",
+    "when": "editorFocus && quickFixWidgetVisible"
+  },
+  {
+    "key": "tab",
+    "command": "selectNextSuggestion",
+    "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+  },
+  {
+    "key": "shift+tab",
+    "command": "selectPrevSuggestion",
+    "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "selectNextQuickFix",
+    "when": "editorFocus && quickFixWidgetVisible"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "selectNextSuggestion",
+    "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+  },
+  {
+    "key": "ctrl+[Backslash]",
+    "command": "workbench.action.terminal.focus",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+[Backslash]",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+w h",
+    "command": "workbench.action.focusLeftGroup"
+  },
+  {
+    "key": "ctrl+w l",
+    "command": "workbench.action.focusRightGroup"
+  }
+]
