@@ -28,8 +28,9 @@ else
 
   sudo make install
 
-  gem install --user-install tmuxinator
-  echo "Ensure that gem bin ('~/.gem/ruby/2.3.1/bin') is in the path"
+  gem install --user-install tmuxinator -v 1.1.5
+  echo "Ensure that gem bin ('~/.gem/ruby/2.5.0/bin') is in the path"
+  echo "PATH=\"\${PATH}:${HOME}/.gem/ruby/2.5.0/bin\""
 
   echo "installed TMUX successfully."
   touch $INSTALLED/tmux-$TMUX_VERSION
