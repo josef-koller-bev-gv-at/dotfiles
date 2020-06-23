@@ -8,7 +8,7 @@ USER_HOME=/home/$USER_NAME
 USER_SOURCES=$USER_HOME/Documents/sources
 INSTALLED=$USER_HOME/.installed
 
-readonly TMUX_VERSION="2.8"
+readonly TMUX_VERSION="3.1b"
 
 cd $USER_HOME
 
