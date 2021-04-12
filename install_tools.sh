@@ -25,7 +25,7 @@ sudo apt-get install libc-dev-bin libc6 libc6:i386 libc6-dev libglademm-2.4-1v5 
 
 #GIT
 
-readonly GIT_VERSION="2.27.0"
+readonly GIT_VERSION="2.31.0"
 readonly git_contrib_dir=$(readlink -f $USER_SOURCES/git-$GIT_VERSION/contrib)
 
 if [ -e $INSTALLED/git-$GIT_VERSION ]; then
