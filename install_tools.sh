@@ -79,7 +79,7 @@ else
     rm $INSTALLED/git-lfs-1.4.4
   fi
 
-  source /etc/upstream-release/lsb-release 
+  source /etc/upstream-release/lsb-release
   #load source and install
   curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | os=$DISTRIB_ID dist=$DISTRIB_CODENAME sudo -E bash
 
@@ -100,7 +100,7 @@ else
   git clone --depth 1 https://github.com/vim/vim.git
   sudo apt-get install libncurses5-dev libgtk2.0-dev libatk1.0-dev libcairo2-dev libx11-dev libxpm-dev libxt-dev exuberant-ctags ack-grep libpython2.7-dev -y
   cd vim
-  ./configure --with-features=huge --enable-rubyinterp --enable-pythoninterp
+  ./configure --with-features=huge --enable-rubyinterp --enable-pythoninterp --enable-python3interp
   make -j 12
   sudo make install
 
