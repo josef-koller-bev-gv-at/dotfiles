@@ -145,7 +145,9 @@ else
   fi
 
   cd $USER_SOURCES
-  git clone https://github.com/Christof/dotfiles
+  if [ ! -d dotfiles ] ; then
+    git clone https://github.com/Christof/dotfiles
+  fi
   cd dotfiles
   ./install.sh
   #TODO user specific files
