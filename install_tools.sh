@@ -21,7 +21,7 @@ mkdir $INSTALLED -p
 cd $USER_HOME
 
 #G++ build
-sudo apt-get install libc-dev-bin libc6 libc6:i386 libc6-dev libcurl3 libglademm-2.4-1v5 libgtkmm-2.4-1v5 cmake g++ build-essential glibc-doc glibc-doc valgrind locales python-dev libboost-all-dev curl -y
+sudo apt-get install libc-dev-bin libc6 libc6:i386 libc6-dev libglademm-2.4-1v5 libgtkmm-2.4-1v5 cmake g++ build-essential glibc-doc glibc-doc valgrind locales python-dev libboost-all-dev curl -y
 
 #GIT
 
@@ -62,7 +62,6 @@ else
   }
 
   install_git_contrib diff-highlight
-  install_git_credential gnome-keyring
   install_git_credential libsecret
 
   echo "installed GIT successfully"
@@ -137,7 +136,7 @@ if [ -e $INSTALLED/dotfiles ];
 then
   echo "Dotfiles already installed."
 else
-  sudo apt-get install libclang-3.8-dev clang-format-3.8 -y
+  sudo apt-get install libclang-dev clang-format -y
   # Create symbolic link because the vim config expects a clang-format
   if [ ! -f /usr/bin/clang-format ];
   then
@@ -155,8 +154,6 @@ else
 fi
 
 #VCPKG
-USER_SOURCES=/home/$USER/Documents/sources
-
 if [ -e $USER_SOURCES/vcpkg ];
 then
   echo "Vcpkg already installed."
@@ -166,7 +163,7 @@ else
   while true; do
     read -p "Do you want to install vcpkg?[y/n]" yn
     case $yn in
-      [Yy]* ) ./dotfiles/install_vcpkg.sh; break;;
+      [Yy]* ) $USER_SOURCES/dotfiles/install_vcpkg.sh; break;;
       [Nn]* ) exit;;
     esac
   done
