@@ -79,8 +79,9 @@ else
     rm $INSTALLED/git-lfs-1.4.4
   fi
 
+  source /etc/upstream-release/lsb-release
   #load source and install
-  curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo -E bash
+  curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | os=$DISTRIB_ID dist=$DISTRIB_CODENAME sudo -E bash
 
   sudo apt-get install git-lfs -y
 
@@ -97,9 +98,9 @@ then
 else
   cd $USER_SOURCES
   git clone --depth 1 https://github.com/vim/vim.git
-  sudo apt-get install libncurses5-dev libgnome2-dev libgnomeui-dev libgtk2.0-dev libatk1.0-dev libbonoboui2-dev libcairo2-dev libx11-dev libxpm-dev libxt-dev exuberant-ctags ack-grep libpython2.7-dev -y
+  sudo apt-get install libncurses5-dev libgtk2.0-dev libatk1.0-dev libcairo2-dev libx11-dev libxpm-dev libxt-dev exuberant-ctags ack-grep libpython2.7-dev -y
   cd vim
-  ./configure --with-features=huge --enable-rubyinterp --enable-pythoninterp
+  ./configure --with-features=huge --enable-rubyinterp --enable-pythoninterp --enable-python3interp
   make -j 12
   sudo make install
 
@@ -144,7 +145,9 @@ else
   fi
 
   cd $USER_SOURCES
-  git clone https://github.com/Christof/dotfiles
+  if [ ! -d dotfiles ] ; then
+    git clone https://github.com/Christof/dotfiles
+  fi
   cd dotfiles
   ./install.sh
   #TODO user specific files

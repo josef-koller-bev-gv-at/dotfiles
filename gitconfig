@@ -25,7 +25,7 @@
 [push]
   default = simple
 [credential]
-  helper = gnome-keyring
+  helper = libsecret
 [pager]
 	diff = diff-highlight | less
 	show = diff-highlight | less
