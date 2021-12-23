@@ -1,0 +1,54 @@
+#!/bin/bash
+
+function vcpkg::env() {
+  local -r vcpkg_dir='${HOME}/Documents/sources/vcpkg'
+  local -r zshrc_path="${HOME}/.zshrc.user"
+
+  echo "export PATH=\"\${PATH}:${vcpkg_dir}\"" >> "${zshrc_path}"
+  echo "export VCPKG_INSTALLED_DIR=\"${vcpkg_dir}/installed/x64-linux\"" >> "${zshrc_path}"
+  echo "export VCPKG_ROOT=\"${vcpkg_dir}\"" >> "${zshrc_path}"
+}
+
+function vcpkg::install() {
+  local -r vcpkg_dir="${root_dir}/vcpkg"
+  local i=""
+
+  echo "Create directory '${root_dir}'"
+  mkdir -p "${root_dir}"
+
+  echo "Run 'git clone ${args[@]} https://github.com/Microsoft/vcpkg.git ${vcpkg_dir}'"
+  git clone ${args[@]} https://github.com/Microsoft/vcpkg.git "${vcpkg_dir}"
+
+  cd "${vcpkg_dir}"
+
+  echo "Install vcpkg"
+  ./bootstrap-vcpkg.sh
+  ./vcpkg integrate install
+
+  for i in .git* buildtrees downloads packages; do
+    echo "Remove '${vcpkg_dir}/${i}'"
+    rm -rf "${vcpkg_dir}/${i}"
+  done
+
+  cd ~-
+}
+
+function main() {
+  root_dir="${HOME}/Documents/sources"
+  local flag OPTARG OPTIND
+  args=("--depth 1")
+
+  while getopts 'b:d:' flag; do
+    case "${flag}" in
+      b) args+=("--branch ${OPTARG}") ;;
+      d) root_dir="${OPTARG}"
+    esac
+  done
+
+  shift $(( ${OPTIND} - 1 ))
+
+  vcpkg::install
+  vcpkg::env
+}
+
+main "$@"
