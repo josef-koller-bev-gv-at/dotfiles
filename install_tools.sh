@@ -166,7 +166,7 @@ else
   while true; do
     read -p "Do you want to install vcpkg?[y/n]" yn
     case $yn in
-      [Yy]* ) $USER_SOURCES/dotfiles/install_vcpkg.sh; break;;
+      [Yy]* ) $USER_SOURCES/dotfiles/install_vcpkg; break;;
       [Nn]* ) exit;;
     esac
   done
