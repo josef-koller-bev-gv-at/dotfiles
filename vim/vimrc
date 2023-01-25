@@ -179,6 +179,7 @@ nnoremap N Nzzzv
 nnoremap <leader>d "_d
 vnoremap <leader>d "_d
 
+nnoremap Q <nop>
 
 " Write file as super user
 cnoremap wsu w !sudo tee % > /dev/null
