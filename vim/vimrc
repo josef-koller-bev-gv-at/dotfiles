@@ -171,6 +171,10 @@ nnoremap <Leader>g <C-]>
 " map jk to esc
 inoremap jk <esc>
 
+" ensure that searched item is in middle of screen
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
 " Write file as super user
 cnoremap wsu w !sudo tee % > /dev/null
 
