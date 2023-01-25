@@ -181,6 +181,9 @@ vnoremap <leader>d "_d
 
 nnoremap Q <nop>
 
+" Substitue for word under cursor
+nnoremap <leader>s :%s/\<<C-r><C-w>\>//gI<Left><Left><Left>
+
 " Write file as super user
 cnoremap wsu w !sudo tee % > /dev/null
 
