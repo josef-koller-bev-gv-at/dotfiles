@@ -171,6 +171,19 @@ nnoremap <Leader>g <C-]>
 " map jk to esc
 inoremap jk <esc>
 
+" ensure that searched item is in middle of screen
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
+" delete without writing deleted content into default register
+nnoremap <leader>d "_d
+vnoremap <leader>d "_d
+
+nnoremap Q <nop>
+
+" Substitue for word under cursor
+nnoremap <leader>s :%s/\<<C-r><C-w>\>//gI<Left><Left><Left>
+
 " Write file as super user
 cnoremap wsu w !sudo tee % > /dev/null
 
