@@ -3,7 +3,7 @@
 ## Installation
 To download and install the dotfiles run the following command in your terminal:
 ```sh
-bash <(curl -s https://raw.githubusercontent.com/Christof/dotfiles/master/install_tools.sh)
+bash <(curl -s https://raw.githubusercontent.com/josef-koller-bev-gv-at/dotfiles/master/install_tools.sh)
 ```
 
 This installs:
